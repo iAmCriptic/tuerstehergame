@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+<script>
+
+var clicks = 0;
+
+
+
+function onClick() {
+  clicks += 1;
+  document.getElementById("clicks").innerHTML = clicks;
+  if (clicks > 5){
+    document.getElementById("deinemom").innerHTML= "jetzt";
+}
+};
+</script>
+</head>
+<body>
+<label for="hallo"></label>
+    
+    <button type="button" onClick="onClick()">Click me</button>
+    <p>Clicks: <a id="clicks">0</a></p>
+
+    <p id="deinemom">hallo</p>
+    
+
+
+</body>
+</html>
