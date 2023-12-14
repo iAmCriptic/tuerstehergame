@@ -98,4 +98,5 @@ function updateHighscore() {
   document.getElementById('highscore').innerText = highscore;
   document.cookie = "highscore=" + highscore; // Speichere den Highscore in einem Cookie
   localStorage.setItem("highscore", highscore);
+  document.cookie = "highscore=" + highscore + ";path=/";
 }

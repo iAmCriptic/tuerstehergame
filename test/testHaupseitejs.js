@@ -1,13 +1,17 @@
-// Auf der anderen Seite, um den Highscore anzuzeigen
-window.onload = function() {
-    // Lese den Highscore aus dem Cookie
-    const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)highscore\s*=\s*([^;]*).*$)|^.*$/, "$1");
-    
-    // Überprüfe, ob ein Highscore-Cookie vorhanden ist
-    if (cookieValue) {
-      document.getElementById('h-score').innerText = cookieValue;
+function getCookie(name) {
+  var cookieName = name + "=";
+  var cookies = document.cookie.split(';');
+  for(var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.indexOf(cookieName) === 0) {
+      return cookie.substring(cookieName.length, cookie.length);
     }
-    if (highscore) {
-        document.getElementById('highscoreOnOtherPage').innerText = highscore;
-      }
   }
+  return null;
+}
+
+var hscore = getCookie("highscore");
+
+window.onload = function() {
+    document.getElementById('h-hscore').innerText = hscore;
+}
