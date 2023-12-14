@@ -83,12 +83,12 @@
     z-index: 1;
 }
 .g-fragen{
-    width: 65%;
+    width: 55%;
     height: 24%;
     z-index: 180;
     position: absolute;
     bottom: 1%;
-    left: 15%;
+    left: 20%;
     text-align: center;
     border: solid;
     border-color:rgb(151, 78, 9);
@@ -185,4 +185,14 @@ div.g-persons{
     position: absolute;
     left:45%;
     top:65%;
+}
+.g-einlass{
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+}
+.g-wegschicken{
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
 }

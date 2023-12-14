@@ -87,3 +87,23 @@ function updateLives() { //Funktion zum Aktualisieren der Leben
 }
 }
 
+let highscore = 0;
+
+function optionClicked(option) {
+  if (option === 'life') {
+    // Wenn auf die Option "Leben verringern" geklickt wurde
+    if (lives > 0) {
+      lives--;
+      updateLives();
+    }
+  } else if (option === 'highscore') {
+    // Wenn auf die Option "Highscore erhöhen" geklickt wurde
+    highscore++;
+    updateHighscore();
+  }
+}
+
+function updateHighscore() {
+  // Aktualisiere den Highscore-Text auf der Seite
+  document.getElementById('highscore').innerText = highscore;
+}

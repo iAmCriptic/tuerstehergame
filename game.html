@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
     <head>
         <link rel="icon" type="image/vnd.microsoft.icon" href="./Bilder/Icon/Website-Icon.ico">
         <link rel="stylesheet" href="css.css">
         <script src="javascript.js"></script>
+        
         <title>Türstehergame</title>
     </head>
     <body id="g-body">
 
         <div class="g-score1">
-            <p>0</p>
+          <p>Highscore: <span id="highscore">0</span></p>
         </div>
         <div class="g-leben">
            <p><span id="lives">3</span>❤️</p>
@@ -50,6 +51,12 @@
               <button type="button" id="q-button" onclick="qTest();">
                 Entwicklertest
               </button> 
+        </div>
+        <div class="g-einlass">
+          <button type="button" id="q-button" onclick="optionClicked('life')">Person Reinlassen</button>
+        </div>
+        <div class="g-wegschicken">
+          <button type="button" id="q-button" onclick="optionClicked('highscore')">Person Wegschicken</button>
         </div>
         <div class="g-aussagen">
             <p id="g-person-aussage">...</p>
