@@ -58,17 +58,18 @@
     background-size: cover;
 }
 .g-score1{
-    width: 5%;
+    width: 10%;
     height: 5%;
     z-index: 200;
     position: absolute;
     right: 1%;
     margin-top: 2%;
     font-size: xx-large;
-    color: white;
+    color: rgb(2, 100, 10);
+    text-align: right;
 }
 .g-leben{
-    width: 5%;
+    width: 10%;
     height: 5;
     z-index: 200;
     position: absolute;
@@ -76,6 +77,7 @@
     margin-top: 4%;
     color: red;
     font-size: xx-large;
+    text-align: right;
 }
 .g-background{
     width: 100%;
@@ -101,7 +103,7 @@
     width: 30%;
     height: 30%;
     margin-left:42%;
-    margin-top: 10%;
+    margin-top: 15%;
     z-index: 2;
     position: absolute;
 }
@@ -130,10 +132,15 @@
 }
 .g-aussagen{
     position: center;
-    background-color: rgb(255, 255, 255);
-    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.315);
     width: 15%;
     height: 10%;
+    border: solid, #202020d3;
+    border-radius: 18px;
+    padding: 5px;
+    left: 25%;
+    top:30%;
+    position: absolute;
 }
 
 #q-button{

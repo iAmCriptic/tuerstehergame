@@ -4,65 +4,72 @@
         <link rel="icon" type="image/vnd.microsoft.icon" href="./Bilder/Icon/Website-Icon.ico">
         <link rel="stylesheet" href="css.css">
         <script src="javascript.js"></script>
-        
-        <title>Türstehergame</title>
+        <title>Türstehergame - Ingame</title>
     </head>
     <body id="g-body">
 
-        <div class="g-score1">
-          <p>Highscore: <span id="highscore">0</span></p>
-        </div>
-        <div class="g-leben">
-           <p><span id="lives">3</span>❤️</p>
-        </div>
-        <div class="g-persons">
-            <image src="Bilder/Concept_Art_Persons/Drogendealer.png" width="auto"height="auto"> </image>
-        </div>
+      <div class="g-score1">
+        <p>Highscore: <span id="highscore">0</span></p>
+      </div>
 
-        <div class="g-fragen">
-            <button type="button" id="q-button" onclick="qAlter();">
-                Wie alt bist du?
-                
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qHabseligkeiten();">
-                Was hast du bei dir?
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qWissen();">
-                  Was weißt du über den Club?
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qBesuchsgrund();">
-                Was ist dein Ziel/Warum bist du hier?
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qGesundheitsstatus();">
-                Wie fühlst du dich/Bist du gesund?
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qWiederholterBesuch();">
-                Schon mal in einem Club gewesen?
-              </button> 
-              
-              <button type="button" id="q-button" onclick="qBeruf();">
-                Was machst du beruflich?
-              </button> 
-              <button type="button" id="q-button" onclick="qTest();">
-                Entwicklertest
-              </button> 
-        </div>
-        <div class="g-einlass">
-          <button type="button" id="q-button" onclick="optionClicked('life')">Person Reinlassen</button>
-        </div>
-        <div class="g-wegschicken">
-          <button type="button" id="q-button" onclick="optionClicked('highscore')">Person Wegschicken</button>
-        </div>
-        <div class="g-aussagen">
-            <p id="g-person-aussage">...</p>
-            <p id="clicks">0</p>
-        </div>
+      <div class="g-leben">
+        <p><span id="lives">3</span>❤️</p>
+      </div>
 
+      <div class="g-persons">
+        <image src="./Bilder/Concept_Art_Persons/Drogendealer.png" alt="Person, Welche Gerade an der Reihe ist. Bilder zum Spielen Erforderlich sry." width="auto"height="auto" id="g-perosnbild"> </image>
+      </div>
 
+      <div class="g-fragen">
+        <button type="button" id="q-button" onclick="qAlter();">
+          Wie alt bist du?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qHabseligkeiten();">
+          Was hast du bei dir?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qWissen();">
+          Was weißt du über den Club?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qBesuchsgrund();">
+          Was ist dein Ziel/Warum bist du hier?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qGesundheitsstatus();">
+          Wie fühlst du dich/Bist du gesund?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qWiederholterBesuch();">
+          Schon mal in einem Club gewesen?
+        </button> 
+              
+        <button type="button" id="q-button" onclick="qBeruf();">
+          Was machst du beruflich?
+        </button>
+
+        <button type="button" id="q-button" onclick="qTest();">
+          Entwicklertest
+        </button> 
+      </div>
+
+      <div class="g-einlass">
+        <button type="button" id="q-button" onclick="Entscheidung()">Person Reinlassen</button>
+      </div>
+
+      <div class="g-wegschicken">
+        <button type="button" id="q-button" onclick="Entscheidung()">Person Wegschicken</button>
+      </div>
+
+      <div class="g-aussagen">
+        <p id="g-person-aussage">...</p>
+        <p id="clicks">0</p>
+      </div>
+
+      <audio id="gAudio" autoplay>
+        <source src="./Musik/placeholder.mp3" type="audio/mp3">
+        Dein Browser unterstützt das Audioelement nicht.
+      </audio>
     </body>
 </html>

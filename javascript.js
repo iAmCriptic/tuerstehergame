@@ -71,7 +71,6 @@ function qTest(){
 function ZuVieleFragen(){ //Funktion zum Abziehen der Leben bei zu Vielen Fragen
   if (clicks >= 5){
     document.getElementById("g-person-aussage").innerHTML= "Das wird mir zu Blöd, Schönen Tag noch!";
-     // Falsch beantwortet
     lives--;
     updateLives();
 
@@ -82,28 +81,120 @@ function updateLives() { //Funktion zum Aktualisieren der Leben
   const livesElement = document.getElementById('lives');
   livesElement.textContent = lives;
   if (lives === 0) {
-    // Keine Leben mehr übrig, Spiel beenden oder weitere Aktionen durchführen
     location.href = 'Loose-Screen.html' //weiterleitung zum loose Screen
 }
 }
 
 let highscore = 0;
 
-function optionClicked(option) {
-  if (option === 'life') {
-    // Wenn auf die Option "Leben verringern" geklickt wurde
+function Entscheidung() {//entscheidet ob reinlassen oder wegschciken die Richtige entscheidung ist. Randomized, damit nicht immer gleich
+  Resetclicks();
+  var randomValue = Math.random(); 
+
+  if (randomValue < 0.5) {
+    // Wenn randomValue kleiner als 0.5 ist, Leben verringern
     if (lives > 0) {
       lives--;
       updateLives();
+      console.log("Leben wurden verringert");
     }
-  } else if (option === 'highscore') {
-    // Wenn auf die Option "Highscore erhöhen" geklickt wurde
+  } else {
+    // Wenn randomValue größer oder gleich 0.5 ist, Highscore erhöhen
     highscore++;
     updateHighscore();
+    console.log("Highscore wurde erhöht");
   }
 }
 
-function updateHighscore() {
-  // Aktualisiere den Highscore-Text auf der Seite
+function updateHighscore() { // Aktualisiere den Highscore-Text auf der Seite
   document.getElementById('highscore').innerText = highscore;
+}
+window.onload = function() { //lautstärkeregelung für die Hintergrundmusik
+  var backgroundAudio = document.getElementById('gAudio');
+  backgroundAudio.volume = 0.1;
+}
+
+function Resetclicks() {
+  clicks = 0; // Setze die Variable auf den gewünschten Standardwert
+  var randomValue = Math.random(); //auslosung welcher Satz von der Person gesagt wird
+
+  if (randomValue < 0.2) {
+    document.getElementById("g-person-aussage").innerHTML= "Hallo, Ich würde gerne in den club";
+  } 
+  else if(randomValue < 0.4){
+    document.getElementById("g-person-aussage").innerHTML= "Lass mich in den Club ich musste schon so Lange warten";
+  }
+  else if(randomValue < 0.6){
+    document.getElementById("g-person-aussage").innerHTML= "...";
+  }
+  else if(randomValue < 0.8){
+    document.getElementById("g-person-aussage").innerHTML= "...";
+  }
+  else{
+    document.getElementById("g-person-aussage").innerHTML= "...";
+  }
+
+  var randomValue2 = Math.random();
+  
+  if (randomValue2 < 0.05) {
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  } 
+  else if(randomValue2 < 0.1){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Drogendealer.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.15){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Fußballer.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.2){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Mann mit Hund.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.25){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Woman.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.3){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.35){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.4){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.45){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.5){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.55){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.6){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.65){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.7){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.75){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.8){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.85){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.9){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else if(randomValue2 < 0.95){
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  else{
+    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
+  }
+  
 }
