@@ -9,7 +9,7 @@
     background-color:rgba(3, 102, 28, 0.452); /* Green */
     border: solid;
     border-color: black;
-    border-radius: 10%;
+    border-radius: 18px;
     color: black;
     padding: 30px 64px;
     text-align: center;
@@ -97,7 +97,7 @@
     margin: 2px;
 
 }
-div.g-persons{
+.g-persons{
     width: 30%;
     height: 30%;
     margin-left:42%;
@@ -109,7 +109,7 @@ div.g-persons{
     background-color:rgba(3, 102, 28, 0.452); /* Green */
     border: solid;
     border-color: black;
-    border-radius: 10%;
+    border-radius: 18px;
     color: black;
     padding: 10px 10px;
     text-align: center;
