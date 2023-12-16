@@ -87,22 +87,19 @@ function updateLives() { //Funktion zum Aktualisieren der Leben
 
 let highscore = 0;
 
-function Entscheidung() {//entscheidet ob reinlassen oder wegschciken die Richtige entscheidung ist. Randomized, damit nicht immer gleich
+function optionClicked(option) {//entscheidet ob reinlassen oder wegschciken die Richtige entscheidung ist.
   Resetclicks();
-  var randomValue = Math.random(); 
-
-  if (randomValue < 0.5) {
-    // Wenn randomValue kleiner als 0.5 ist, Leben verringern
-    if (lives > 0) {
-      lives--;
-      updateLives();
-      console.log("Leben wurden verringert");
-    }
-  } else {
-    // Wenn randomValue größer oder gleich 0.5 ist, Highscore erhöhen
+  if (option === 'wegschicken') {
+    lives--;
+    updateLives();
+    console.log("Leben wurden verringert")
+    Resetclicks();
+  }
+  else if(option === 'reinlassen'){// Wenn Argument am Button reinlassen, dann Highscore Erhöhen
     highscore++;
     updateHighscore();
     console.log("Highscore wurde erhöht");
+    Resetclicks();
   }
 }
 
@@ -116,85 +113,4 @@ window.onload = function() { //lautstärkeregelung für die Hintergrundmusik
 
 function Resetclicks() {
   clicks = 0; // Setze die Variable auf den gewünschten Standardwert
-  var randomValue = Math.random(); //auslosung welcher Satz von der Person gesagt wird
-
-  if (randomValue < 0.2) {
-    document.getElementById("g-person-aussage").innerHTML= "Hallo, Ich würde gerne in den club";
-  } 
-  else if(randomValue < 0.4){
-    document.getElementById("g-person-aussage").innerHTML= "Lass mich in den Club ich musste schon so Lange warten";
-  }
-  else if(randomValue < 0.6){
-    document.getElementById("g-person-aussage").innerHTML= "...";
-  }
-  else if(randomValue < 0.8){
-    document.getElementById("g-person-aussage").innerHTML= "...";
-  }
-  else{
-    document.getElementById("g-person-aussage").innerHTML= "...";
-  }
-
-  var randomValue2 = Math.random();
-  
-  if (randomValue2 < 0.05) {
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  } 
-  else if(randomValue2 < 0.1){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Drogendealer.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.15){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Fußballer.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.2){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Mann mit Hund.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.25){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Woman.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.3){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.35){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.4){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.45){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.5){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.55){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.6){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.65){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.7){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.75){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.8){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.85){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.9){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else if(randomValue2 < 0.95){
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  else{
-    document.getElementById('g-perosnbild').src = './Bilder/Concept_Art_Persons/Obdachloser.png'; // Neuen Bildpfad setzen
-  }
-  
 }

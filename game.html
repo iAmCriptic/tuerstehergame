@@ -17,7 +17,7 @@
       </div>
 
       <div class="g-persons">
-        <image src="./Bilder/Concept_Art_Persons/Drogendealer.png" alt="Person, Welche Gerade an der Reihe ist. Bilder zum Spielen Erforderlich sry." width="auto"height="auto" id="g-perosnbild"> </image>
+        <image src="Bilder/Concept_Art_Persons/Drogendealer.png" width="auto"height="auto"> </image>
       </div>
 
       <div class="g-fragen">
@@ -55,15 +55,16 @@
       </div>
 
       <div class="g-einlass">
-        <button type="button" id="q-button" onclick="Entscheidung()">Person Reinlassen</button>
+        <button type="button" id="q-button" onclick="optionClicked('reinlassen')">Person Reinlassen</button>
       </div>
 
       <div class="g-wegschicken">
-        <button type="button" id="q-button" onclick="Entscheidung()">Person Wegschicken</button>
+        <button type="button" id="q-button" onclick="optionClicked('wegschicken')">Person Wegschicken</button>
       </div>
 
       <div class="g-aussagen">
         <p id="g-person-aussage">...</p>
+        <p id="clicks">0</p>
       </div>
 
       <audio id="gAudio" autoplay>
