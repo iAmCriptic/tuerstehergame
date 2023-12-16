@@ -10,7 +10,8 @@ function openHauptseite(){
 
 var clicks = 0;
 let lives = 3;
-
+let highscore = 0;
+var character = 0;
 
 function qAlter(){
     clicks += 1;
@@ -84,8 +85,6 @@ function updateLives() { //Funktion zum Aktualisieren der Leben
     location.href = 'Loose-Screen.html' //weiterleitung zum loose Screen
 }
 }
-
-let highscore = 0;
 
 function optionClicked(option) {//entscheidet ob reinlassen oder wegschciken die Richtige entscheidung ist.
   Resetclicks();
