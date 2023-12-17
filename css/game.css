@@ -94,3 +94,12 @@ button:disabled {
 #score::before {
   content: "Punkte: ";
 }
+
+#game-over>.content {
+  width: 20em;
+  height: 3em;
+  padding: 1em;
+  background: red;
+  color: black;
+  text-align: center;
+}

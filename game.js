@@ -123,6 +123,7 @@ function setVisitor(visitorIndex) {
 
 function nextVisitor() {
   visitorIndex++
+  if (visitorIndex >= visitors.length) visitorIndex = 0
   setVisitor(visitorIndex)
 }
 
@@ -132,8 +133,12 @@ function raiseScore() {
 }
 
 function lowerScore() {
-  health--
-  healthEl.innerText = '♥️'.repeat(health)
+  // no health left
+  if (health === 0) location.hash = 'game-over'
+  else {
+    health--
+    healthEl.innerText = '♥️'.repeat(health)
+  }
 }
 
 function acceptCurrentVisitor() {
