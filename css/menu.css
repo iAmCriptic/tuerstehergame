@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  font-size: 32px;
+  background: #353535 url("/media/bg_menu.jpg") center no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 4em;
+  text-shadow: 1px 1px 0 black;
+}
+
+.actions {
+  display: flex;
+  margin: 3em 0;
+}
+
+.action {
+  display: block;
+  margin: .5em;
+  padding: .5em;
+  border: 2px solid white;
+  background: #000A;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 8em;
+}
+
+.action:hover {
+  border-color: yellow;
+  color: yellow;
+}
+
+#anleitung {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background: #000A;
+}
+
+#anleitung:target {
+  display: flex;
+}
+
+#anleitung>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#anleitung h1 {
+  margin: 0;
+}
+
+#anleitung .close {
+  position: absolute;
+  top: -.5em;
+  right: -.5em;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: black;
+  border: 2px solid white;
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}

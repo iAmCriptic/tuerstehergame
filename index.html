@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Hauptseite</title>
-    <link rel="stylesheet" href="css.css">
-    <script src="javascript.js"></script>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="./Bilder/Icon/Website-Icon.ico">
+  <title>Türsteher ̣-- The Game</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./media/website.ico">
 </head>
-    <body class="h-body"id="h-body">
-        <div class="h-überschrift">
-        Der Türsteher
-        </div>
-        <button id="hs-button" onclick="openGame();">Start</button>
-        <p id="h-score">
-            Score: 0
-        </p>
-        <button id="ha-button" onclick="openAnleitung();">Anleitung</button>
-    </body>
+
+<body id="menu">
+  <header>
+    <h1>Der Türsteher</h1>
+  </header>
+  <div class="actions">
+    <a class="action" href="/game">Start</a>
+    <a class="action" href="/#anleitung">Anleitung</a>
+  </div>
+
+  <div id="anleitung">
+    <div class="content">
+      <a class="close" href="/#menu">X</a>
+      <h1>Anleitung</h1>
+      <p>
+        Du bist Türsteher in einem Club. Entscheide ob die Personen in der
+        Schlange hinein dürfen. Stelle ihnen Fragen um sicherzustellen, dass die
+        Personen nicht gegen die Hausregeln verstoßen.
+      </p>
+      <p>
+        Aber pass auf! Die Geduldsspanne mancher Personen sollte nicht ausgereizt werden.
+        Falls du eine Person reinlässt, die eigentlich nicht reindarf oder die Person durch zu viele Fragen weggeht,
+        verlierst du ein Leben.
+      </p>
+      <p>
+        Insgesamt hast du 3 Leben. Leg jetzt los und zeig dem Chef des Clubs, wie gut du wirklich bist!
+      </p>
+    </div>
+  </div>
+</body>
+
 </html>
