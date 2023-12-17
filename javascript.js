@@ -230,6 +230,12 @@ function Resetclicks() {
   clicks = 0; // Setze die Variable auf den gewünschten Standardwert
   document.getElementById('clicks').innerHTML = clicks;
   SetRandomCharacter(); 
+
+}
+
+function SetRandomCharacter(){ //wält einen Zufälligen Character aus.
+  character = Math.floor(Math.random() * 10);
+  document.getElementById('clicks').innerHTML = character;
   if (character < 2){ //Zeigt den Neuen Charaqcter an
     document.getElementById('g-person-bild').src = './Bilder/Concept_Art_Persons/Drogendealer.png';
   }
@@ -245,9 +251,4 @@ function Resetclicks() {
   else {
     document.getElementById('g-person-bild').src = './Bilder/Concept_Art_Persons/Woman.png';
   }
-}
-
-function SetRandomCharacter(){ //wält einen Zufälligen Character aus.
-  character = Math.floor(Math.random() * 10);
-  document.getElementById('clicks').innerHTML = character;
 }
