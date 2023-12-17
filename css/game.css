@@ -1,0 +1,96 @@
+body {
+  background-image: url("/media/bg_game.jpg");
+  background-position-y: bottom;
+  font-size: 20px;
+}
+
+#visitors {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#visitors>img {
+  margin-left: -60px;
+}
+
+#chat {
+  list-style-type: none;
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  width: 30vw;
+  height: calc(70vh - 1em);
+  padding: .5em 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  gap: .25em;
+  background: #000A;
+}
+
+.bubble {
+  width: 60%;
+  padding: .5em;
+  border-radius: 1em;
+}
+
+.bubble.in {
+  align-self: flex-start;
+  background: #336;
+}
+
+.bubble.out {
+  align-self: flex-end;
+  background: #366;
+}
+
+#questions,
+#accept,
+#decline {
+  position: absolute;
+  top: calc(75vh + 2em);
+}
+
+#questions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  left: 8em;
+  width: calc(100vw - 20em);
+  padding: .5em 2em;
+}
+
+button {
+  font-size: 16px;
+}
+
+button.action {
+  background: black;
+}
+
+#accept {
+  right: 1vw;
+  margin-top: 2em;
+  border-color: green;
+}
+
+#decline {
+  left: 1vw;
+  margin-top: 2em;
+  border-color: red;
+}
+
+button:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
+#score::before {
+  content: "Punkte: ";
+}

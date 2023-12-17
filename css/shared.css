@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+  font-size: 32px;
+  background-color: #353535;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.action {
+  display: block;
+  margin: .5em;
+  padding: .5em;
+  border: 2px solid white;
+  background: #000A;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  width: 8em;
+  cursor: pointer;
+}
+
+.action:hover {
+  border-color: yellow;
+  color: yellow;
+}

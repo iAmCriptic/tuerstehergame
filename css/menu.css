@@ -1,17 +1,5 @@
 body {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  color: white;
-  font-size: 32px;
-  background: #353535 url("/media/bg_menu.jpg") center no-repeat;
-  background-size: cover;
+  background-image: url("/media/bg_menu.jpg");
 }
 
 header {
@@ -26,23 +14,6 @@ header {
 .actions {
   display: flex;
   margin: 3em 0;
-}
-
-.action {
-  display: block;
-  margin: .5em;
-  padding: .5em;
-  border: 2px solid white;
-  background: #000A;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  width: 8em;
-}
-
-.action:hover {
-  border-color: yellow;
-  color: yellow;
 }
 
 #anleitung {
