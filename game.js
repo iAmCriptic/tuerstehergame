@@ -10,6 +10,7 @@ const declineBtn = $('decline')
 
 let score = 0
 let health = 3
+let questionCount = 0
 let visitorIndex = 0
 let currentVisitor 
 
@@ -24,7 +25,7 @@ const visitors = [
     "Warum gehst du denn in Clubs?", // Besuchsgrund
     "Ging mir schon schlechter.", // Gesundheit
     "Ständig.", // wiederholter Besuch
-    "Ich bin Selbstständig", // Beruf
+    "Ich bin mein eigener Chef.", // Beruf
   ]},
   // Footballer
   { src: '/media/visitors/02.png', patient: true, desired: true, answers: [
@@ -91,28 +92,6 @@ function createEl(parent, elType, elClass, text) {
   return el
 }
 
-function askQuestion(questionIndex) {
-  const question = questions[questionIndex]
-  const answer = currentVisitor.answers[questionIndex]
-
-  const questionBtn = questionsEl.children[questionIndex]
-  questionBtn.disabled = true
-
-  createEl(chatEl, 'div', 'bubble out', question)
-  setTimeout(() => {;
-    const answerEl = createEl(chatEl, 'div', 'bubble in', '...')
-    setTimeout(() => {
-      answerEl.innerText = answer
-    }, 1000)
-  }, 200)
-}
-
-function resetQuestions() {
-  for (let button of questionsEl.children) {
-    button.disabled = false
-  }
-}
-
 function setVisitor(visitorIndex) {
   currentVisitor = visitors[visitorIndex]
   visitorEl.src = currentVisitor.src
@@ -122,6 +101,7 @@ function setVisitor(visitorIndex) {
 }
 
 function nextVisitor() {
+  questionCount = 0
   visitorIndex++
   if (visitorIndex >= visitors.length) visitorIndex = 0
   setVisitor(visitorIndex)
@@ -145,6 +125,37 @@ function acceptCurrentVisitor() {
   if (currentVisitor.desired) raiseScore()
   else lowerScore()
   nextVisitor()
+}
+
+
+function askQuestion(questionIndex) {
+  const question = questions[questionIndex]
+  const answer = currentVisitor.answers[questionIndex]
+
+  const questionBtn = questionsEl.children[questionIndex]
+  questionBtn.disabled = true
+
+  questionCount++
+
+  createEl(chatEl, 'div', 'bubble out', question)
+  setTimeout(() => {;
+    const answerEl = createEl(chatEl, 'div', 'bubble in', '...')
+    setTimeout(() => {
+      if ((!currentVisitor.patient && questionCount > 4) || questionCount > 6) {
+        answerEl.innerText = "Das wird mir hier zu blöd, ich geh woanders hin."
+        lowerScore()
+        setTimeout(() => nextVisitor(), 2000)
+      } else {
+        answerEl.innerText = answer
+      }
+    }, 1000)
+  }, 200)
+}
+
+function resetQuestions() {
+  for (let button of questionsEl.children) {
+    button.disabled = false
+  }
 }
 
 questions.forEach((question, index) => {
