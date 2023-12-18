@@ -1,5 +1,5 @@
 body {
-  background-image: url("/media/bg_game.jpg");
+  background-image: url("./media/bg_game.jpg");
   background-position-y: bottom;
   font-size: 20px;
 }

@@ -17,7 +17,7 @@ let currentVisitor
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
   // Drug Dealer
-  { src: '/media/visitors/01.png', patient: false, desired: false, answers: [
+  { src: './media/visitors/01.png', patient: false, desired: false, answers: [
     "Wenns sein muss...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "23", // Alter
     "Wieso willst du das wissen?", // Habseligkeiten
@@ -28,7 +28,7 @@ const visitors = [
     "Ich bin mein eigener Chef.", // Beruf
   ]},
   // Footballer
-  { src: '/media/visitors/02.png', patient: true, desired: true, answers: [
+  { src: './media/visitors/02.png', patient: true, desired: true, answers: [
     "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "X", // Alter
     "Nichts besonderes, hier schau selbst...", // Habseligkeiten
@@ -39,7 +39,7 @@ const visitors = [
     "Ich bin Sportler.", // Beruf
   ]},
   // Dog Owner
-  { src: '/media/visitors/03.png', patient: true, desired: true, answers: [
+  { src: './media/visitors/03.png', patient: true, desired: true, answers: [
     "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "X", // Alter
     "Nichts besonderes, hier schau selbst...", // Habseligkeiten
@@ -50,7 +50,7 @@ const visitors = [
     "Ich arbeite bei der Bank.", // Beruf
   ]},
   // Homeless
-  { src: '/media/visitors/04.png', patient: true, desired: false, answers: [
+  { src: './media/visitors/04.png', patient: true, desired: false, answers: [
     "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "X", // Alter
     "Nichts.", // Habseligkeiten
@@ -61,7 +61,7 @@ const visitors = [
     "Früher war ich auch Abenteurer, aber dann habe ich einen Pfeil ins Knie bekommen.", // Beruf
   ]},
   // Business Woman
-  { src: '/media/visitors/05.png', patient: false, desired: true, answers: [
+  { src: './media/visitors/05.png', patient: false, desired: true, answers: [
     "Wenn es denn unbedingt sein muss!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "42", // Alter
     "Meine Geldbörse, mein Handy und eine Pistole... nur ein Scherz.", // Habseligkeiten
@@ -82,6 +82,7 @@ const questions = [
   "Wie fühlst du dich?",
   "Schon mal in einem Club gewesen?",
   "Was machst du beruflich?",
+  "Test",
 ]
 
 function createEl(parent, elType, elClass, text) {
