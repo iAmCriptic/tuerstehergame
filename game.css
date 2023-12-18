@@ -97,9 +97,17 @@ button:disabled {
 
 #game-over>.content {
   width: 20em;
-  height: 3em;
+  height: 5em;
   padding: 1em;
   background: red;
   color: black;
   text-align: center;
+}
+#retrylogo{
+  width: 40px;
+  height: 40px;
+}
+#homelogo{
+  width: 40px;
+  height: 40px;
 }
