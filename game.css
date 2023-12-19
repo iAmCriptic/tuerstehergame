@@ -32,6 +32,7 @@ body {
   justify-content: flex-end;
   gap: .25em;
   background: #000A;
+  border-radius: 1em;
 }
 
 .bubble {
@@ -99,7 +100,7 @@ button:disabled {
   width: 20em;
   height: 5em;
   padding: 1em;
-  background: red;
+  background: rgba(92, 1, 1, 0.699);
   color: black;
   text-align: center;
 }

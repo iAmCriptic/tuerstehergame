@@ -82,7 +82,7 @@ const questions = [
   "Wie fühlst du dich?",
   "Schon mal in einem Club gewesen?",
   "Was machst du beruflich?",
-  "Test",
+
 ]
 
 function createEl(parent, elType, elClass, text) {
@@ -108,7 +108,7 @@ function nextVisitor() {
   setVisitor(visitorIndex)
 }
 
-function raiseScore() {
+function raiseScore() { //Erhöt den Score 
   score++
   scoreEl.innerText = `${score}`
 }
@@ -118,7 +118,7 @@ function lowerScore() {
   if (health === 0) location.hash = 'game-over'
   else {
     health--
-    healthEl.innerText = '♥️'.repeat(health)
+    healthEl.innerText = '❤️'.repeat(health)
   }
 }
 
@@ -134,16 +134,16 @@ function askQuestion(questionIndex) {
   const answer = currentVisitor.answers[questionIndex]
 
   const questionBtn = questionsEl.children[questionIndex]
-  questionBtn.disabled = true
+  questionBtn.disabled = true //deaktiviert den Button (Nicht nochmal klickbar)
 
-  questionCount++
+  questionCount++ //erhöt den Question Count (Relevant wann die Person geht)
 
-  createEl(chatEl, 'div', 'bubble out', question)
+  createEl(chatEl, 'div', 'bubble out', question) //funktion zum Erstellen der Chat Bubbles?
   setTimeout(() => {;
     const answerEl = createEl(chatEl, 'div', 'bubble in', '...')
     setTimeout(() => {
       if ((!currentVisitor.patient && questionCount > 4) || questionCount > 6) {
-        answerEl.innerText = "Das wird mir hier zu blöd, ich geh woanders hin."
+        answerEl.innerText = "Das wird mir hier zu blöd, ich geh woanders hin."  //Antwort bei Zu vielen Fragen
         lowerScore()
         setTimeout(() => nextVisitor(), 2000)
       } else {
@@ -153,7 +153,7 @@ function askQuestion(questionIndex) {
   }, 200)
 }
 
-function resetQuestions() {
+function resetQuestions() { //setzt den Questions Counter Zurück
   for (let button of questionsEl.children) {
     button.disabled = false
   }
