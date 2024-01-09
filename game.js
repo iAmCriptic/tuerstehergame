@@ -17,7 +17,7 @@ let currentVisitor
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
   // Drug Dealer
-  { src: './media/visitors/01.png', patient: false, desired: false, answers: [
+  { src: './media/visitors/01.png', patient: false, desired: false, answers: [ //Desiree bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt 
     "Wenns sein muss...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "23", // Alter
     "Wieso willst du das wissen?", // Habseligkeiten
