@@ -21,27 +21,27 @@ const visitors = [
     "Wenns sein muss...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "23", // Alter
     "Wieso willst du das wissen?", // Habseligkeiten
-    "Hier hat man Privatssphäre.", // Clubwissen
+    "Hier hat man Privatsphäre.", // Clubwissen
     "Warum gehst du denn in Clubs?", // Besuchsgrund
     "Ging mir schon schlechter.", // Gesundheit
     "Ständig.", // wiederholter Besuch
-    "Ich bin mein eigener Chef.", // Beruf
+    "Ich bin selbstständig.", // Beruf
   ]},
   // Footballer
   { src: './media/visitors/02.png', patient: true, desired: true, answers: [
     "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "X", // Alter
+    "Ich bin 26", // Alter
     "Nichts besonderes, hier schau selbst...", // Habseligkeiten
     "Wurde mir empfohlen.", // Clubwissen
     "Party mit Freunden.", // Besuchsgrund
-    "Mir gehts gut.", // Gesundheit
+    "Ich bin kerngesund.", // Gesundheit
     "Ein paar mal.", // wiederholter Besuch
     "Ich bin Sportler.", // Beruf
   ]},
   // Dog Owner
-  { src: './media/visitors/03.png', patient: true, desired: true, answers: [
-    "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "X", // Alter
+  { src: './media/visitors/03.png', patient: true, desired: false, answers: [
+    "Was willst'n du wissen?", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "42 Jahre jung", // Alter
     "Nichts besonderes, hier schau selbst...", // Habseligkeiten
     "Wurde mir empfohlen.", // Clubwissen
     "Party mit Freunden.", // Besuchsgrund
@@ -51,9 +51,9 @@ const visitors = [
   ]},
   // Homeless
   { src: './media/visitors/04.png', patient: true, desired: false, answers: [
-    "Klar, schieß los!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "X", // Alter
-    "Nichts.", // Habseligkeiten
+    "Hmm...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "38", // Alter
+    "Was denkst du denn hmm...?", // Habseligkeiten
     "Die lange Schlange vor der Tür spricht dafür, dass es hier gut ist.", // Clubwissen
     "Ablenkung.", // Besuchsgrund
     "Geht so.", // Gesundheit
@@ -62,7 +62,7 @@ const visitors = [
   ]},
   // Business Woman
   { src: './media/visitors/05.png', patient: false, desired: true, answers: [
-    "Wenn es denn unbedingt sein muss!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "Du weißt wohl nicht wer ich bin. Aber gut wenn's sein muss.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "42", // Alter
     "Meine Geldbörse, mein Handy und eine Pistole... nur ein Scherz.", // Habseligkeiten
     "Wurde mir empfohlen.", // Clubwissen
@@ -71,6 +71,144 @@ const visitors = [
     "Ein paar mal.", // wiederholter Besuch
     "Ich leite erfolgreich ein mittelständisches Unternehmen.", // Beruf
   ]},
+    // Old Man
+    { src: './media/visitors/06.png', patient: true, desired: true, answers: [
+      "Erzähl mal jungchien", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "62 Jahre", // Alter
+      "Mein Handy und mein Geld aber sonst nichts.", // Habseligkeiten
+      "Noch nicht viel...deshalb bin ich hier.", // Clubwissen
+      "Mein Sohn geht hier oft hin und ich wollte mird das mal ansehen.", // Besuchsgrund
+      "Vor zwei Jahren habe ich mir den Fuß gebrochen und seid dem tut der Weh.", // Gesundheit
+      "Ich war noch nie hier.", // wiederholter Besuch
+      "Ich Arbeite bei der BSR.", // Beruf
+    ]},
+    // Cool guy
+    { src: './media/visitors/07.png', patient: false, desired: true, answers: [
+      "Hau raus!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "32 Jahre", // Alter
+      "Meinen Autoschlüssen und mein Geld.", // Habseligkeiten
+      "Entspannter Club zum entspannen.", // Clubwissen
+      "Ich brauche Ablenkung vom Alltag", // Besuchsgrund
+      "Alles super", // Gesundheit
+      "Das siebte mal mitlerweile. Also jap.", // wiederholter Besuch
+      "Ich bin Autoverkäufer.", // Beruf
+    ]},
+      // Vorlage
+    { src: './media/visitors/08.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/09.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+    // Vorlage
+    { src: './media/visitors/10.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/11.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/12.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/13.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/14.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/15.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/16.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+          // Vorlage
+    { src: './media/visitors/17.png', patient: false, desired: true, answers: [
+      "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "", // Alter
+      "", // Habseligkeiten
+      "", // Clubwissen
+      "", // Besuchsgrund
+      "", // Gesundheit
+      "", // wiederholter Besuch
+      "", // Beruf
+    ]},
+
+
+
+
+
+
 ]
 
 const questions = [
@@ -82,7 +220,6 @@ const questions = [
   "Wie fühlst du dich?",
   "Schon mal in einem Club gewesen?",
   "Was machst du beruflich?",
-
 ]
 
 function createEl(parent, elType, elClass, text) {
