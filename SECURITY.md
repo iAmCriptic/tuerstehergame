@@ -7,6 +7,6 @@
 |   1.0   | :white_check_mark: | 
 :white_check_mark:  :x:
 
-##Bugs
+## Bugs
 Alles
 ## Sonstige
