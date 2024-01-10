@@ -135,6 +135,7 @@ header {
   margin-left: 0,5em;
   text-shadow: 1px 1px 0 black;
   font-size: 2em;
+  background-color: #00000088;
 }
 img {
   user-select: none;
@@ -169,7 +170,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: -12px; /* Centers thumb on the track */
 
   /*custom styles*/
-  background-color: #5cd5eb;
+  background-color: #398d9c;
   height: 2rem;
   width: 1rem;
 }
@@ -194,8 +195,8 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 0; /*Removes default border-radius that FF applies*/
 
   /*custom styles*/
-  background-color: #5cd5eb;
-  height: 2rem;
+  background-color: #398d9c;
+  height: 1rem;
   width: 1rem;
 }
 
@@ -204,3 +205,4 @@ input[type="range"]:focus::-moz-range-thumb {
  outline: 3px solid #053a5f;
  outline-offset: 0.125rem; 
 }
+
