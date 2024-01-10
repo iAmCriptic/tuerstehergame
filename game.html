@@ -56,13 +56,14 @@
       <a href="game.html">
         <img src="./media/resume_logo.png" id="resumelogo">
       </a>
+      <br>
       <label for="volumeSlider">Volume:</label>
-      <input type="range" id="volumeSlider" min="0" max="100" value="50" oninput="adjustVolume(this.value)">
+      <input type="range" id="volumeSlider" min="0" max="1" value="0.5" oninput="adjustVolume(this.value)">
     </div>
   </div>
 
   <audio id="gAudio" autoplay>
-    <source src="./media/placeholder.mp3" type="audio/mp3" volume="0.1">
+    <source src="./media/placeholder.mp3" type="audio/mp3" volume="0.5">
     In einem modernen Browser gäbe es sogar Musik!
   </audio>
 
