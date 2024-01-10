@@ -80,3 +80,34 @@ header {
   top: 1px;
   color: black;
 }
+
+
+
+#welten>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#welten h1 {
+  margin: 0;
+}
+
+#welten .close {
+  position: absolute;
+  top: -.5em;
+  right: -.5em;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: black;
+  border: 2px solid white;
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
