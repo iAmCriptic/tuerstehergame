@@ -12,7 +12,9 @@ let score = 0
 let health = 3
 let questionCount = 0
 let visitorIndex = 0
-let currentVisitor 
+let currentVisitor
+
+var audio = document.getElementById("gAudio");
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
@@ -347,6 +349,13 @@ function resetQuestions() { //setzt den Questions Counter Zurück
     button.disabled = false
   }
 }
+
+function adjustVolume(value) {
+  // Add logic to adjust the volume based on the value
+  console.log('Volume adjusted to ' + value);
+  audio.volume = value;
+}
+
 function loadGameState() {
   const savedState = localStorage.getItem('gameState');
   if (savedState) {
