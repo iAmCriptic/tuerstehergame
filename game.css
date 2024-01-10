@@ -100,15 +100,42 @@ button:disabled {
   width: 20em;
   height: 5em;
   padding: 1em;
-  background: rgba(92, 1, 1, 0.699);
-  color: black;
+  background: rgb(161, 1, 1);
   text-align: center;
+  border: solid;
+  border-radius: 18px;
+}
+#pause>.content {
+  width: 20em;
+  height: 5em;
+  padding: 1em;
+  background: rgb(204, 156, 0);
+  text-align: center;
+  border: solid;
+  border-radius: 18px;
 }
 #retrylogo{
   width: 40px;
   height: 40px;
 }
 #homelogo{
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
+}
+#resumelogo{
+  width: 45px;
+  height: 45px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 0,5em;
+  text-shadow: 1px 1px 0 black;
+  font-size: 2em;
+}
+img {
+  user-select: none;
 }

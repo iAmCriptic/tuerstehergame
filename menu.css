@@ -9,11 +9,7 @@ header {
   width: 100%;
   margin-left: 4em;
   text-shadow: 1px 1px 0 black;
-}
-
-.actions {
-  display: flex;
-  margin: 3em 0;
+  font-size: 2em;
 }
 
 #anleitung>.content {
@@ -43,4 +39,38 @@ header {
   font-weight: bold;
   color: white;
   text-decoration: none;
+}
+
+#clubregeln>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#clubregeln h1 {
+  margin: 0;
+}
+
+#clubregeln .close {
+  position: absolute;
+  top: -.5em;
+  right: -.5em;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: black;
+  border: 2px solid white;
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  margin: 3em 0;
 }
