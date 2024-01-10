@@ -7,7 +7,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+  margin-left: 1em;
   text-shadow: 1px 1px 0 black;
   font-size: 1em;
 }
@@ -73,4 +73,10 @@ header {
 .actions {
   display: flex;
   margin: 3em 0;
+}
+.score{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  color: black;
 }
