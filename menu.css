@@ -31,8 +31,8 @@ header {
   display: block;
   width: 1.5em;
   height: 1.5em;
-  background: black;
-  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   line-height: 1.45em;
   text-align: center;
