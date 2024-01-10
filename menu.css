@@ -7,9 +7,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-left: 4em;
+  
   text-shadow: 1px 1px 0 black;
-  font-size: 2em;
+  font-size: 1em;
 }
 
 #anleitung>.content {
