@@ -46,7 +46,7 @@ const visitors = [
     "Wurde mir empfohlen.", // Clubwissen
     "Party mit Freunden.", // Besuchsgrund
     "Mir geht's gut.", // Gesundheit
-    "Ein paar mal.", // wiederholter Besuch
+    "Nein noch nicht.", // wiederholter Besuch
     "Ich arbeite bei der Bank.", // Beruf
   ]},
   // Homeless
@@ -57,7 +57,7 @@ const visitors = [
     "Die lange Schlange vor der Tür spricht dafür, dass es hier gut ist.", // Clubwissen
     "Ablenkung.", // Besuchsgrund
     "Ich habe vielleicht Corona.", // Gesundheit
-    "Ein paar Male.", // wiederholter Besuch
+    "Ja vor einigen Jahren.", // wiederholter Besuch
     "Früher war ich auch Abenteurer, aber dann habe ich einen Pfeil ins Knie bekommen.", // Beruf
   ]},
   // Business Woman
@@ -68,7 +68,7 @@ const visitors = [
     "Wurde mir empfohlen.", // Clubwissen
     "Ich treffe mich hier mit Kollegen.", // Besuchsgrund
     "Mir gehts prima.", // Gesundheit
-    "Ein paar mal.", // wiederholter Besuch
+    "Natürlich.", // wiederholter Besuch
     "Ich leite erfolgreich ein mittelständiges Unternehmen.", // Beruf
   ]},
     // Old Man
@@ -264,9 +264,9 @@ const questions = [
   "Was hast du bei dir?",
   "Was weißt du über den Club?",
   "Warum bist du hier?",
-  "Bist du Gesund?",
+  "Wie fühlst du dich den heut so?",
   "Schon mal in einem Club gewesen?",
-  "Was machst du beruflich?",
+  "Was machst'n beruflich?",
 ]
 
 function createEl(parent, elType, elClass, text) {
