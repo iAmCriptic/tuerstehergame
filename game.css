@@ -125,6 +125,7 @@ button:disabled {
 #resumelogo{
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 
 header {
