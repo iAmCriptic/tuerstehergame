@@ -19,7 +19,7 @@ var audio = document.getElementById("gAudio");
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
   // Drug Dealer
-  { src: './media/visitors/01.png', patient: false, desired: false, answers: [ //Desiree bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt 
+  { src: './media/visitors/01.png', patient: false, desired: false, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
     "Wenns sein muss...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "23", // Alter
     "Wieso willst du das wissen?", // Habseligkeiten
@@ -260,7 +260,7 @@ const visitors = [
     ]},
 ]
 
-const questions = [
+const questions = [ //alle fragen, die zu verfügung stehen
   "Bevor ich dich reinlassen kann, habe ich ein paar Fragen an dich.",
   "Wie alt bist du?",
   "Was hast du bei dir?",
@@ -287,7 +287,7 @@ function setVisitor(visitorIndex) {
   askQuestion(0)
 }
 
-function nextVisitor() {
+function nextVisitor() { //Öffnet den nächsten visitor
   questionCount = 0
   visitorIndex++
   if (visitorIndex >= visitors.length) visitorIndex = 0
@@ -300,7 +300,7 @@ function raiseScore() { //Erhöt den Score
   saveGameState(); // Speichern nach jeder Änderung des Spielstands
 }
 
-function lowerScore() {
+function lowerScore() { //verringert das leben oder zeigt den Endscreen an
   // no health left
   if (health === 0){
     location.hash = 'game-over'
@@ -315,7 +315,7 @@ function lowerScore() {
 }
 
 function acceptCurrentVisitor() {
-  if (currentVisitor.desired) raiseScore()
+  if (currentVisitor.desired) raiseScore()  // Wenn 
   else lowerScore()
   nextVisitor()
 }
@@ -350,13 +350,11 @@ function resetQuestions() { //setzt den Questions Counter Zurück
   }
 }
 
-function adjustVolume(value) {
-  // Add logic to adjust the volume based on the value
-  console.log('Volume adjusted to ' + value);
+function adjustVolume(value) { //lautstärkeregelung
   audio.volume = value;
 }
 
-function loadGameState() {
+function loadGameState() { //lädt den stand des Games nach öffnen anderer Menüs
   const savedState = localStorage.getItem('gameState');
   if (savedState) {
     const gameState = JSON.parse(savedState);
@@ -368,28 +366,18 @@ function loadGameState() {
   return null;
 }
 
-function saveGameState() {
+function saveGameState() { //speichert den Stand daes Games -- Wird durchgeführt nachdem eine Person reingelassen oder Weggeschickt wird
   const gameState = { score, health, visitorIndex };
   localStorage.setItem('gameState', JSON.stringify(gameState));
 }
 
-function clearGameState() {
-  localStorage.removeItem('gameState');
-}
-
-// Beispiel: Funktion, um den Spielstand zu löschen
-function resetGameState() {
-  // Setze die Variablen auf ihre Standardwerte oder irgendetwas anderes
+function resetGameState() { //Setzt den Speicher Zurück, beispielsweise nach dem Tod
   score = 0;
   health = 3;
   visitorIndex = 0;
-
-  // Aktualisiere die Anzeige
   healthEl.innerText = '❤️'.repeat(health);
   scoreEl.innerText = `${score}`;
-
-  // Lösche den Spielstand aus dem Local Storage
-  clearGameState();
+  localStorage.removeItem('gameState');
 }
 
 questions.forEach((question, index) => {
@@ -400,11 +388,9 @@ questions.forEach((question, index) => {
 acceptBtn.addEventListener('click', () => acceptCurrentVisitor())
 declineBtn.addEventListener('click', () => nextVisitor())
 
-// Initialisierung
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeicherter Spielstand verfügbar ist
   const loadedGameState = loadGameState();
-  if (loadedGameState) {
-    // Wenn ein gespeicherter Spielstand vorhanden ist, setze den Zustand entsprechend
+  if (loadedGameState) { // Wenn ein gespeicherter Spielstand vorhanden ist, setze den Zustand entsprechend
     score = loadedGameState.score;
     health = loadedGameState.health;
     visitorIndex = loadedGameState.visitorIndex;

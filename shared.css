@@ -14,6 +14,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -ms-user-select: None;
+  -moz-user-select: None;
+  -webkit-user-select: None;
+  user-select: None;
 }
 
 .action {
@@ -50,3 +54,6 @@ body {
   display: flex;
 }
 
+img {
+  user-select: none;
+}

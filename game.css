@@ -98,13 +98,14 @@ button:disabled {
 
 #game-over>.content {
   width: 20em;
-  height: 5em;
+  height: 6em;
   padding: 1em;
   background: rgb(161, 1, 1);
   text-align: center;
   border: solid;
   border-radius: 18px;
 }
+
 #pause>.content {
   width: 20em;
   height: 6em;
@@ -114,14 +115,27 @@ button:disabled {
   border: solid;
   border-radius: 18px;
 }
+
+#endless-selection>.content {
+  width: 20em;
+  height: 6em;
+  padding: 1em;
+  background: rgb(28, 167, 0);
+  text-align: center;
+  border: solid;
+  border-radius: 18px;
+}
+
 #retrylogo{
   width: 40px;
   height: 40px;
 }
+
 #homelogo{
   width: 45px;
   height: 45px;
 }
+
 #resumelogo{
   width: 45px;
   height: 45px;
@@ -138,9 +152,7 @@ header {
   font-size: 2em;
   background-color: #00000088;
 }
-img {
-  user-select: none;
-}
+
 /********** Range Input Styles **********/
 /*Range Reset*/
 input[type="range"] {
