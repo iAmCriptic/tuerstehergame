@@ -1,4 +1,5 @@
 const $ = id => document.getElementById(id)
+const backgroundMusic = document.getElementById('backgroundMusic');
 
 const scoreEl = $('score')
 const healthEl = $('health')
@@ -13,6 +14,8 @@ let health = 3
 let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
+let endlessMode = false; // Neues Flag für den Endlos-Modus
+let endlessCounter = 0; // Zählervariable für den Endlos-Modus
 
 var audio = document.getElementById("gAudio");
 
@@ -281,7 +284,7 @@ const musicFiles = [ //random auswahl von musik
   './media/Musik/Club_7.mp3',
 ]
 
-const backgroundMusic = document.getElementById('backgroundMusic');
+
 backgroundMusic.src = getRandomMusic();
 
 function createEl(parent, elType, elClass, text) {
@@ -303,8 +306,20 @@ function setVisitor(visitorIndex) {
 function nextVisitor() { //Öffnet den nächsten visitor
   questionCount = 0
   visitorIndex++
-  if (visitorIndex >= visitors.length) visitorIndex = 0
   setVisitor(visitorIndex)
+  if (visitorIndex >= visitors.length) 
+  if (endlessMode && endlessCounter === 1) {
+    const userDecision = confirm("Möchtest du den Endlos-Modus fortsetzen?");
+    if (userDecision) {
+      endlessCounter = 0; // Setze den Zähler zurück
+      // Hier könntest du weitere Aktionen für den Endlos-Modus durchführen
+    } else {
+      location.hash = 'game-over';
+      resetGameState();
+    }
+  } else {
+    endlessCounter++;
+  }
 }
 
 function raiseScore() { //Erhöt den Score 
@@ -398,6 +413,15 @@ function getRandomMusic() {//wählt zufällige musik aus
   return musicFiles[randomIndex];
 }
 
+function playRandomMusic() {
+  backgroundMusic.src = getRandomMusic();
+  backgroundMusic.play();
+}
+
+function startBackgroundMusic() {
+  playRandomMusic();
+}
+
 questions.forEach((question, index) => {
   const button = createEl(questionsEl, 'button', 'action', question)
   button.addEventListener('click', () => askQuestion(index))
@@ -416,4 +440,5 @@ document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeiche
     scoreEl.innerText = `${score}`
   }
   setVisitor(visitorIndex);
+  startBackgroundMusic(); // Starte die Hintergrundmusik beim Laden der Seite
 });
