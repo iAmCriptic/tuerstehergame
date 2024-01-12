@@ -271,6 +271,19 @@ const questions = [ //alle fragen, die zu verfügung stehen
   "Was machst'n beruflich?",
 ]
 
+const musicFiles = [ //random auswahl von musik
+  './media/Musik/Club_1.mp3',
+  './media/Musik/Club_2.mp3',
+  './media/Musik/Club_3.mp3',
+  './media/Musik/Club_4.mp3',
+  './media/Musik/Club_5.mp3',
+  './media/Musik/Club_6.mp3',
+  './media/Musik/Club_7.mp3',
+]
+
+const backgroundMusic = document.getElementById('backgroundMusic');
+backgroundMusic.src = getRandomMusic();
+
 function createEl(parent, elType, elClass, text) {
   const el = document.createElement(elType)
   el.className = elClass
@@ -378,6 +391,11 @@ function resetGameState() { //Setzt den Speicher Zurück, beispielsweise nach de
   healthEl.innerText = '❤️'.repeat(health);
   scoreEl.innerText = `${score}`;
   localStorage.removeItem('gameState');
+}
+
+function getRandomMusic() {//wählt zufällige musik aus
+  const randomIndex = Math.floor(Math.random() * musicFiles.length);
+  return musicFiles[randomIndex];
 }
 
 questions.forEach((question, index) => {
