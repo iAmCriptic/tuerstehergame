@@ -15,3 +15,11 @@ Zum Spielen https://iamcriptic.github.io/tuerstehergame2.0/ öffnen
   - Improved GameOver-Screen
 
 ## Bilder
+
+## Musik
+Music provided by NoCopyrightSounds
+
+Artists:
+  - Club:
+    - Diamond Eyes
+    - NEFFEX
