@@ -30,7 +30,7 @@
       Du hast deinen Chef enttäuscht.
       <br />
       GAME OVER
-      <br>
+      <br><br>
       
       <a href="game.html">
         <img src="./media/Retry_logo.png" id="retrylogo">
@@ -47,6 +47,10 @@
       Dein Kollegeat gerade übernommen.
       <br>
       Pause
+      <br><br>
+
+      <label for="volumeSlider">Volume:</label>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" oninput="adjustVolume(this.value)">
       <br>
 
       <a href="index.html">
@@ -56,12 +60,6 @@
       <a onClick="javascript:history.back()">
         <img src="./media/resume_logo.png" id="resumelogo">
       </a>
-
-      <br>
-      <label for="volumeSlider">Volume:</label>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" oninput="adjustVolume(this.value)">
-
-      <br><br>
     </div>
   </div>
 
@@ -70,7 +68,7 @@
       Du Hast das Level Abgeschlossen
       <br />
       Auswahl
-      <br>
+      <br><br>
 
       <a href="index.html">
         <img src="./media/home_logo.png" id="homelogo">
@@ -84,7 +82,7 @@
 
 
   <audio id="gAudio" autoplay> <!--Musik im Spiel-->
-    <source src="./media/placeholder.mp3" type="audio/mp3" volume="1">
+    <source src="./media/placeholder.mp3" type="audio/mp3" volume="0.5">
     In einem modernen Browser gäbe es sogar Musik!
   </audio>
 
