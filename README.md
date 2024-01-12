@@ -18,7 +18,8 @@ Zum Spielen https://iamcriptic.github.io/tuerstehergame2.0/ öffnen
 
 ## Musik
 Music provided by NoCopyrightSounds
+
 Artists:
-  Club:
-    Diamond Eyes
-    NEFFEX
+  - Club:
+    - Diamond Eyes
+    - NEFFEX
