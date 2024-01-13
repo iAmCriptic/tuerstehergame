@@ -12,12 +12,14 @@ header {
   font-size: 2em;
 }
 
-#welten>.content {
+#welten > .content {
   position: relative;
   width: 960px;
   height: 640px;
   padding: 1em;
   background: #000A;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 #welten h1 {
@@ -25,9 +27,6 @@ header {
 }
 
 #welten .close {
-  position: absolute;
-  top: -.5em;
-  right: -.5em;
   display: block;
   width: 1.5em;
   height: 1.5em;
@@ -39,6 +38,37 @@ header {
   font-weight: bold;
   color: white;
   text-decoration: none;
+  z-index: 2;
+}
+
+#welten .difficultI,
+#welten .difficultII,
+#welten .difficultIII,
+#welten .difficultIV,
+#welten .difficultV {
+  margin-top: 10px; /* Füge nach Bedarf Abstand zwischen den Schwierigkeitsgraden hinzu */
+  flex: 0 0 33%;
+  text-align: center;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#welten .wolrds{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+#welten .difficultII a[disabled],
+#welten .difficultIII a[disabled],
+#welten .difficultIV a[disabled],
+#welten .difficultV a[disabled] {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
 }
 
 #anleitung>.content {
@@ -54,20 +84,18 @@ header {
 }
 
 #anleitung .close {
-  position: absolute;
-  top: -.5em;
-  right: -.5em;
   display: block;
   width: 1.5em;
   height: 1.5em;
-  background: black;
-  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   line-height: 1.45em;
   text-align: center;
   font-weight: bold;
   color: white;
   text-decoration: none;
+  z-index: 2;
 }
 
 #clubregeln>.content {
@@ -83,20 +111,18 @@ header {
 }
 
 #clubregeln .close {
-  position: absolute;
-  top: -.5em;
-  right: -.5em;
   display: block;
   width: 1.5em;
   height: 1.5em;
-  background: black;
-  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   line-height: 1.45em;
   text-align: center;
   font-weight: bold;
   color: white;
   text-decoration: none;
+  z-index: 2;
 }
 
 .actions {
@@ -110,7 +136,4 @@ header {
   top: 1px;
   color: black;
 }
-#welten{
-  flex-flow: nowrap;
-  overflow-y:visible;
-}
+
