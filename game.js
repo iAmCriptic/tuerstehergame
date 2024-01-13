@@ -9,8 +9,8 @@ const chatEl = $('chat')
 const questionsEl = $('questions')
 const acceptBtn = $('accept')
 const declineBtn = $('decline')
-const audio = $('backgroundMusic')
 
+let audio = $('backgroundMusic')
 let score = 0
 let health = 3
 let stars = 0
