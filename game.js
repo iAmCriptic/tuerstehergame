@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeiche
   setVisitor(visitorIndex);
 });
 
-audioElement.addEventListener('ended', function() {
+audio.addEventListener('ended', function() {
   const nextMusic = getRandomMusic();
   console.log('Next music:', nextMusic);
 });
