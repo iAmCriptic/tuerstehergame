@@ -314,9 +314,8 @@ function raiseScore() { //Erhöt den Score
   saveGameState(); // Speichern nach jeder Änderung des Spielstands
 }
 
-function lowerScore() { //verringert das leben oder zeigt den Endscreen an
-  // no health left
-  if (health === 0){
+function lowerLife() { //verringert das leben oder zeigt den Endscreen an
+  if (health === 0){ // no health left
     location.hash = 'game-over'
     resetGameState() //löschte den Spielstand
   } 
@@ -328,8 +327,24 @@ function lowerScore() { //verringert das leben oder zeigt den Endscreen an
   }
 }
 
+function lowerScore(){
+  if(score === 0){
+    lowerLife();
+  }
+  else {
+    score --
+    scoreEl.innerText = `${score}`
+  }
+}
+
 function acceptCurrentVisitor() {
   if (currentVisitor.desired) raiseScore()  // Wenn 
+  else lowerLife()
+  nextVisitor()
+}
+
+function declineCurrentVisitor(){
+  if(!currentVisitor.desired) raiseScore()
   else lowerScore()
   nextVisitor()
 }
@@ -349,7 +364,7 @@ function askQuestion(questionIndex) {
     setTimeout(() => {
       if ((!currentVisitor.patient && questionCount > 4) || questionCount > 6) {
         answerEl.innerText = "Das wird mir hier zu blöd, ich geh woanders hin."  //Antwort bei Zu vielen Fragen
-        lowerScore()
+        lowerLife()
         setTimeout(() => nextVisitor(), 2000)
       } else {
         answerEl.innerText = answer
@@ -408,7 +423,7 @@ questions.forEach((question, index) => {
 })
 
 acceptBtn.addEventListener('click', () => acceptCurrentVisitor())
-declineBtn.addEventListener('click', () => nextVisitor())
+declineBtn.addEventListener('click', () => declineCurrentVisitor())
 
 document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeicherter Spielstand verfügbar ist
   const loadedGameState = loadGameState();
