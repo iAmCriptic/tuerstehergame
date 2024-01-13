@@ -50,7 +50,7 @@
       <br><br>
 
       <label for="volumeSlider">Volume:</label>
-      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" oninput="adjustVolume(this.value)">
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" oninput="adjustVolume(this.value)">
       <br>
 
       <a href="index.html">
@@ -67,7 +67,7 @@
     <div class="content">
       Du Hast das Level Abgeschlossen
       <br />
-      Auswahl
+      <div id="stars"></div>
       <br><br>
 
       <a href="index.html">
@@ -82,11 +82,11 @@
 
 
   <audio id="backgroundMusic" autoplay> <!--Musik im Spiel-->
-    <source src="./media/Musik/Club_1.mp3" type="audio/mp3" volume="0.5">
+    <source src="./media/Musik/Club_1.mp3" type="audio/mp3" volume="1">
     In einem modernen Browser gäbe es sogar Musik!
   </audio>
 
-<script defer src="game.js"></script>
+  <script defer src="game.js"></script>
 </body>
 
 </html>

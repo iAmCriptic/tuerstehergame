@@ -4,18 +4,20 @@ const backgroundMusic = document.getElementById('backgroundMusic');
 const scoreEl = $('score')
 const healthEl = $('health')
 const visitorEl = $('visitor')
+const StarsEl = $('stars')
 const chatEl = $('chat')
 const questionsEl = $('questions')
 const acceptBtn = $('accept')
 const declineBtn = $('decline')
+const audio = $('backgroundMusic')
 
 let score = 0
 let health = 3
+let stars = 0
 let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
-
-var audio = document.getElementById("gAudio");
+let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
@@ -340,12 +342,14 @@ function lowerScore(){
 function acceptCurrentVisitor() {
   if (currentVisitor.desired) raiseScore()  // Wenn 
   else lowerLife()
+  raiseStars()
   nextVisitor()
 }
 
 function declineCurrentVisitor(){
   if(!currentVisitor.desired) raiseScore()
   else lowerScore()
+  raiseStars()
   nextVisitor()
 }
 
@@ -389,6 +393,7 @@ function loadGameState() { //lädt den stand des Games nach öffnen anderer Men�
     const gameState = JSON.parse(savedState);
     score = gameState.score;
     health = gameState.health;
+    stars = gameState.stars;
     visitorIndex = gameState.visitorIndex;
     return gameState;
   }
@@ -396,13 +401,14 @@ function loadGameState() { //lädt den stand des Games nach öffnen anderer Men�
 }
 
 function saveGameState() { //speichert den Stand daes Games -- Wird durchgeführt nachdem eine Person reingelassen oder Weggeschickt wird
-  const gameState = { score, health, visitorIndex };
+  const gameState = { score, health, visitorIndex, stars };
   localStorage.setItem('gameState', JSON.stringify(gameState));
 }
 
 function resetGameState() { //Setzt den Speicher Zurück, beispielsweise nach dem Tod
   score = 0;
   health = 3;
+  stars = 0;
   visitorIndex = 0;
   healthEl.innerText = '❤️'.repeat(health);
   scoreEl.innerText = `${score}`;
@@ -416,6 +422,21 @@ function getRandomMusic() {//wählt zufällige musik aus
 
 }
 
+function raiseStars() {
+  if (score === 4 || score === 12 || score === 18) {
+    // Überprüfen, ob der Score zuvor noch nicht erreicht wurde
+    if (!starsEarned.includes(score)) {
+      starsEarned.push(score);
+
+      // Überprüfen, ob die maximale Anzahl der Sterne noch nicht erreicht wurde
+      if (stars < 3) {
+        stars++;
+        console.log(stars);
+        StarsEl.innerText = '⭐'.repeat(stars);
+      }
+    }
+  }
+}
 
 questions.forEach((question, index) => {
   const button = createEl(questionsEl, 'button', 'action', question)
@@ -432,6 +453,7 @@ document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeiche
     health = loadedGameState.health;
     visitorIndex = loadedGameState.visitorIndex;
     healthEl.innerText = '❤️'.repeat(health)
+    StarsEl.innerText = '⭐'.repeat(stars)
     scoreEl.innerText = `${score}`
   }
   setVisitor(visitorIndex);
