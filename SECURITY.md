@@ -12,9 +12,9 @@
   Thats Only the plans for the release. Patchnotes Will be Released on Release date
   - Added Pause Button in Game
   - Added New Levels
-  - Added Volume adjustments
+  - Added Volume adjustments  :white_check_mark:
   - Added Info why you lost a Live
-  - Changes Point System
+  - Changes Point System  :white_check_mark:
   - Added bar to see patience level
   - Changes on how anwsers are Displayed in the game (Only Visual Changes)
   - Bug Fixes
