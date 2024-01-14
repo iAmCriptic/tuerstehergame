@@ -6,7 +6,7 @@ Das Türstehergame ist ein Schulprojekt von Schülern der Merian-Schule in Berli
 
 ## Spielen
 
-Zum Spielen https://iamcriptic.github.io/tuerstehergame2.0/ öffnen
+Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
 
 ## Updates
 ### v1.0.0
