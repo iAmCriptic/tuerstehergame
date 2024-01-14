@@ -37,5 +37,15 @@ Artists:
   - Club:
     - Diamond Eyes
     - NEFFEX
+    - Egzod, Maestro Chives, Don Diablo
+    - Low Mileage
+    - Beave
+    - Vanessa Campagna, Hoober
+    - Luna Lark, Julius Dreisig
+    - Anna Yvette
+    - OSKI
+    - Alaina Cross
+    - Diamond Eyes
   - Festival:
     - Enter Artist Here
+      
