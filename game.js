@@ -16,6 +16,7 @@ let stars = 0
 let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
+let endlessCount = 0
 let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
@@ -339,10 +340,12 @@ function lowerScore(){
 }
 
 function acceptCurrentVisitor() {
-  if (currentVisitor.desired) raiseScore()  // Wenn 
+  if (currentVisitor.desired) raiseScore()  // Wenn der Aktuelle Besucher reindarf, Erhöhe den Score
   else lowerLife()
   raiseStars()
   nextVisitor()
+  raiseEndless()
+  openEndlessMenu()
 }
 
 function declineCurrentVisitor(){
@@ -350,6 +353,8 @@ function declineCurrentVisitor(){
   else lowerScore()
   raiseStars()
   nextVisitor()
+  raiseEndless()
+  openEndlessMenu()
 }
 
 function askQuestion(questionIndex) {
@@ -400,7 +405,7 @@ function loadGameState() { //lädt den stand des Games nach öffnen anderer Men�
 }
 
 function saveGameState() { //speichert den Stand daes Games -- Wird durchgeführt nachdem eine Person reingelassen oder Weggeschickt wird
-  const gameState = { score, health, visitorIndex, stars };
+  const gameState = { score, health, visitorIndex, stars, endlessCount };
   localStorage.setItem('gameState', JSON.stringify(gameState));
 }
 
@@ -409,6 +414,7 @@ function resetGameState() { //Setzt den Speicher Zurück, beispielsweise nach de
   health = 3;
   stars = 0;
   visitorIndex = 0;
+  endlessCount = 0;
   healthEl.innerText = '❤️'.repeat(health);
   scoreEl.innerText = `${score}`;
   localStorage.removeItem('gameState');
@@ -430,10 +436,21 @@ function raiseStars() {
       // Überprüfen, ob die maximale Anzahl der Sterne noch nicht erreicht wurde
       if (stars < 3) {
         stars++;
-        console.log(stars);
+        console.log('Stars' + stars);
         StarsEl.innerText = '⭐'.repeat(stars);
       }
     }
+  }
+}
+
+function raiseEndless(){
+  endlessCount++
+  console.log('PersonCount' + endlessCount)
+}
+
+function openEndlessMenu(){
+  if (endlessCount === 22){
+    location.hash = 'endless-selection'
   }
 }
 

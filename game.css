@@ -98,7 +98,7 @@ button:disabled {
 
 #game-over>.content {
   width: 20em;
-  height: 6em;
+  height: 7em;
   padding: 1em;
   background: rgb(161, 1, 1);
   text-align: center;
@@ -108,7 +108,7 @@ button:disabled {
 
 #pause>.content {
   width: 20em;
-  height: 6em;
+  height: 7em;
   padding: 1em;
   background: rgb(204, 156, 0);
   text-align: center;
@@ -118,7 +118,7 @@ button:disabled {
 
 #endless-selection>.content {
   width: 20em;
-  height: 6em;
+  height: 7em;
   padding: 1em;
   background: rgb(28, 167, 0);
   text-align: center;
