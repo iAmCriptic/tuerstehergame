@@ -460,5 +460,6 @@ document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeiche
 
 audio.addEventListener('ended', function() {
   const nextMusic = getRandomMusic();
+  audio.play();
   console.log('Next music:', nextMusic);
 });
