@@ -27,7 +27,7 @@ Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
 ### Level I - Club
 ![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/421db482-047e-4509-94df-70d02c4aee6d)
 
-Bilder Wurden mit der KI https://perchance.org/ai-pixel-art-generator  Erstellt
+Bilder Wurden mit der KI https://perchance.org/ai-pixel-art-generator  Erstellt <br>
 Icons stammen von https://www.flaticon.com/
 
 ## Musik
