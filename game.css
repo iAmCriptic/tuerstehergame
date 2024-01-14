@@ -126,20 +126,22 @@ button:disabled {
   border-radius: 18px;
 }
 
-#retrylogo{
+#logo{
   width: 40px;
   height: 40px;
-}
-
-#homelogo{
-  width: 45px;
-  height: 45px;
-}
-
-#resumelogo{
-  width: 45px;
-  height: 45px;
   cursor: pointer;
+}
+
+#volumelogo{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#logoLink {
+  display: inline-block;
+  z-index: index auto;
+  text-decoration: none;
 }
 
 header {

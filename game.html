@@ -2,17 +2,21 @@
 <html lang="de">
 
 <head>
-  <title>Türsther -- Der Club</title>
+  <title>Der Türsther - Club</title>
   <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="game.css">
-  <link rel="icon" type="image/vnd.microsoft.icon" href="./media/website.ico">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./media/Icons/website.ico">
 </head>
 
 <body>
   <header>
     <div id="score">0</div>
+    <a href="game.html#pause" id="logoLink">
+      <img src="./media/Icons/pause_icon.png" id="logo">
+    </a>
     <div id="health">❤️❤️❤️</div>
   </header>
+  
   <div id="visitors">
     <img id="visitor" src="./media/visitors/01.png" alt="The Visitor" />
   </div>
@@ -33,11 +37,11 @@
       <br><br><br>
       
       <a href="game.html">
-        <img src="./media/Retry_logo.png" id="retrylogo">
+        <img src="./media/Icons/retry_logo.png" id="logo">
       </a>
          
       <a href="index.html">
-        <img src="./media/home_logo.png" id="homelogo">
+        <img src="./media/Icons/home_logo.png" id="logo">
       </a>
     </div>
   </div>
@@ -49,16 +53,16 @@
       Pause
       <br><br>
 
-      <label for="volumeSlider">Volume:</label>
+      <label for="volumeSlider"><img src="media/Icons/volume_logo.png" id="volumelogo"></label>
       <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" oninput="adjustVolume(this.value)">
       <br><br>
 
       <a href="index.html">
-        <img src="./media/home_logo.png" id="homelogo">
+        <img src="./media/Icons/home_logo.png" id="logo">
       </a>
 
       <a onClick="javascript:history.back()">
-        <img src="./media/resume_logo.png" id="resumelogo">
+        <img src="./media/Icons/resume_logo.png" id="logo">
       </a>
     </div>
   </div>
@@ -72,18 +76,18 @@
       Möchtest du zum Hauptmenü oder Weiterspielen?
       <br>
       <a href="index.html">
-        <img src="./media/home_logo.png" id="homelogo">
+        <img src="./media/Icons/home_logo.png" id="logo">
       </a>
 
       <a onClick="javascript:history.back()">
-        <img src="./media/resume_logo.png" id="resumelogo">
+        <img src="./media/Icons/resume_logo.png" id="logo">
       </a>
     </div>
   </div>
 
 
   <audio id="backgroundMusic" autoplay> <!--Musik im Spiel-->
-    <source src="./media/Musik/Club_1.mp3" type="audio/mp3" volume="1">
+    <source src="" type="audio/mp3" volume="1">
     In einem modernen Browser gäbe es sogar Musik!
   </audio>
 
