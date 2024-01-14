@@ -316,7 +316,7 @@ function raiseScore() { //Erhöt den Score
 }
 
 function lowerLife() { //verringert das leben oder zeigt den Endscreen an
-  if (health === 0){ // no health left
+  if (health === 1){ // no health left
     location.hash = 'game-over'
     resetGameState() //löschte den Spielstand
   } 
