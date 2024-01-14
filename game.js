@@ -1,5 +1,5 @@
 const $ = id => document.getElementById(id)
-const backgroundMusic = document.getElementById('backgroundMusic');
+const audio = document.getElementById('backgroundMusic');
 
 const scoreEl = $('score')
 const healthEl = $('health')
@@ -10,7 +10,6 @@ const questionsEl = $('questions')
 const acceptBtn = $('accept')
 const declineBtn = $('decline')
 
-let audio = $('backgroundMusic')
 let score = 0
 let health = 3
 let stars = 0
