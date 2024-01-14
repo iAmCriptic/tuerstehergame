@@ -391,6 +391,17 @@ function adjustVolume(value) { //lautstärkeregelung
   audio.volume = value;
 }
 
+function toggleMute() {
+  if (audio.volume == 0) {
+      adjustVolume(0.5);
+      var newPosition = 0.5;
+  } else {
+      adjustVolume(0);
+      var newPosition = 0;
+  }
+  volumeSlider.value = newPosition;
+}
+
 function loadGameState() { //lädt den stand des Games nach öffnen anderer Menüs
   const savedState = localStorage.getItem('gameState');
   if (savedState) {
@@ -487,4 +498,10 @@ audio.addEventListener('ended', function() {
   console.log('Next music:', nextMusic);
   audio.src = nextMusic;
   audio.play();  // Starte das nächste Lied
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Event-Listener für das Label hinzufügen
+  var volumeLabel = document.getElementById("volumeLabel");
+  volumeLabel.addEventListener("click", toggleMute);
 });
