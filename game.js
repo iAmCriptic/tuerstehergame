@@ -459,7 +459,15 @@ document.addEventListener('DOMContentLoaded', () => { //überprüft ob Gespeiche
 });
 
 audio.addEventListener('ended', function() {
-  const nextMusic = getRandomMusic();
-  audio.play();
+  console.log('Musik beendet. Starte nächstes Lied...');
+  const currentMusic = audio.src;  // Aktuelles Lied
+  let nextMusic;
+
+  do {
+    nextMusic = getRandomMusic();  // Neues zufälliges Lied
+  } while (nextMusic === currentMusic);  // Wiederhole, wenn das neue Lied gleich dem aktuellen ist
+
   console.log('Next music:', nextMusic);
+  audio.src = nextMusic;
+  audio.play();  // Starte das nächste Lied
 });
