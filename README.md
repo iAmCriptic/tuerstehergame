@@ -15,6 +15,7 @@ Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
   - Improved GameOver-Screen
 
 ## Bilder
+Bilder Wurden mit der KI https://perchance.org/ai-pixel-art-generator  Erstellt
 
 ## Musik
 Music provided by NoCopyrightSounds
@@ -23,3 +24,5 @@ Artists:
   - Club:
     - Diamond Eyes
     - NEFFEX
+  - Festival:
+    - Enter Artist Here
