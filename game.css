@@ -132,6 +132,12 @@ button:disabled {
   cursor: pointer;
 }
 
+.logo{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
 #volumelogo{
   width: 20px;
   height: 20px;

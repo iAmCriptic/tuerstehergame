@@ -125,6 +125,40 @@ header {
   z-index: 2;
 }
 
+#changelog > .content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#changelog .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#changelog h1,
+#changelog h4 {
+  margin: 0;
+}
+
+#changelog ul{
+  margin: 0;
+}
+
 .actions {
   display: flex;
   margin: 3em 0;
