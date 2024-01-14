@@ -282,6 +282,15 @@ const musicFiles = [ //random auswahl von musik
   './media/Musik/Club_5.mp3',
   './media/Musik/Club_6.mp3',
   './media/Musik/Club_7.mp3',
+  './media/Musik/Club_8.mp3',
+  './media/Musik/Club_9.mp3',
+  './media/Musik/Club_10.mp3',
+  './media/Musik/Club_11.mp3',
+  './media/Musik/Club_12.mp3',
+  './media/Musik/Club_13.mp3',
+  './media/Musik/Club_14.mp3',
+  './media/Musik/Club_15.mp3',
+  './media/Musik/Club_16.mp3',
 ]
 
 
