@@ -18,7 +18,7 @@
   - Added bar to see patience level
   - Changes on how anwsers are Displayed in the game (Only Visual Changes)
   - Bug Fixes
-  - Quality of live Changes
+  - Quality of life Changes
 
 ### 1.0.0 -- Released 10.01.2024
   - Improved Hud Layout
