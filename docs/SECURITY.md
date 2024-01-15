@@ -10,8 +10,8 @@
 ## Version changes 
 ### 1.0.1 -- Planned for 22.01.2024
   Thats Only the plans for the release. Patchnotes Will be Released on Release date
-  - Added Pause Button in Game
-  - Added New Levels
+  - Added Pause Button in Game :white_check_mark:
+  - Added New Levels 
   - Added Volume adjustments  :white_check_mark:
   - Added Info why you lost a Live
   - Changes Point System  :white_check_mark:
