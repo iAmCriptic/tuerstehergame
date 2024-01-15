@@ -9,6 +9,7 @@ const chatEl = $('chat')
 const questionsEl = $('questions')
 const acceptBtn = $('accept')
 const declineBtn = $('decline')
+const bildElement = $("volumelogo");
 
 let score = 0
 let health = 3
@@ -397,6 +398,14 @@ function resetQuestions() { //setzt den Questions Counter Zurück
 
 function adjustVolume(value) { //lautstärkeregelung
   audio.volume = value;
+  if(audio.volume == 0){
+    var neuerBildPfad = "./media/Icons/volume_mute_logo.png";
+    bildElement.src = neuerBildPfad;
+  }
+  else{
+    var neuerBildPfad = "./media/Icons/volume_logo.png";
+    bildElement.src = neuerBildPfad;
+  }
 }
 
 function toggleMute() {
@@ -512,4 +521,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // Event-Listener für das Label hinzufügen
   var volumeLabel = document.getElementById("volumeLabel");
   volumeLabel.addEventListener("click", toggleMute);
+});
+
+document.addEventListener("keydown", function(event) {
+  // Überprüfen, ob die gedrückte Taste die "P"-Taste ist (keyCode 80)
+  if (event.keyCode === 80) {
+    location.hash = 'pause'
+  }
 });

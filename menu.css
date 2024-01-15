@@ -159,6 +159,33 @@ header {
   margin: 0;
 }
 
+#shortcuts>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#shortcuts h1 {
+  margin: 0;
+}
+
+#shortcuts .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
 .actions {
   display: flex;
   margin: 3em 0;
