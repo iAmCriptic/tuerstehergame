@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id)
-const audio = document.getElementById('backgroundMusic');
 
+const audio = $('backgroundMusic');
 const scoreEl = $('score')
 const healthEl = $('health')
 const visitorEl = $('visitor')
