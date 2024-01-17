@@ -14,12 +14,12 @@ header {
 
 #welten > .content {
   position: relative;
-  width: 960px;
+  width: 1200px; /*960px*/
   height: 640px;
   padding: 1em;
   background: #000A;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #welten h1 {
@@ -124,6 +124,32 @@ header {
   text-decoration: none;
   z-index: 2;
 }
+#festivalregeln>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#festivalregeln h1 {
+  margin: 0;
+}
+
+#festivalregeln .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
 
 #changelog > .content {
   position: relative;
@@ -198,3 +224,7 @@ header {
   color: black;
 }
 
+.action:disabled {
+  opacity: .5;
+  pointer-events: none;
+}

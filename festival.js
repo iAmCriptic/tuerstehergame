@@ -25,13 +25,13 @@ const visitors = [
   // Blumenmädchen
   { src: './media/visitors/visitors_festival/01.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
     "Selbstverständlich.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "26", // Alter
-    "Ja, klar.", // Habseligkeiten
-    "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", // Clubwissen
-    "Wenn Blumen nicht als Waffen zählen, nein.", // Besuchsgrund
-    "So etwas kommt mir nicht in die Hände.", // Gesundheit
-    "BITTE?! Auf keinen Fall!", // wiederholter Besuch
-    "Ich freue mich auf die Musik und die Pyro-Show.", // Beruf
+    "26", 
+    "Ja, klar.", 
+    "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", 
+    "Wenn Blumen nicht als Waffen zählen, nein.", 
+    "So etwas kommt mir nicht in die Hände.", 
+    "BITTE?! Auf keinen Fall!", 
+    "Ich freue mich auf die Musik und die Pyro-Show.", 
   ]},
   // bekifftes Mädchen
   { src: './media/visitors/visitors_festival/02.png', patient: true, desired: false, answers: [
@@ -55,212 +55,60 @@ const visitors = [
     "Ich nicht aber meine Freundin VIElleIcHt:). HEHEHEHE. ", // wiederholter Besuch
     "Hehehehee!", // Beruf
   ]},
-  // Homeless
+  // flirty, dirty, murty Chicken 
   { src: './media/visitors/visitors_festival/04.png', patient: true, desired: true, answers: [
-    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "38", // Alter
-    "Was denkst du denn hmm...?", // Habseligkeiten
-    "Die lange Schlange vor der Tür spricht dafür, dass es hier gut ist.", // Clubwissen
-    "Ablenkung.", // Besuchsgrund
-    "Ich habe vielleicht Corona.", // Gesundheit
-    "Ja vor einigen Jahren.", // wiederholter Besuch
-    "Früher war ich auch Abenteurer, aber dann habe ich einen Pfeil ins Knie bekommen.", // Beruf
+    "Gern doch Süßer;).", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "32.", // Alter
+    "Das Ticket für mein Herz hast du ja schon... Und das andere habe ich auch dabei.", // Habseligkeiten
+    "Nur eine kleine Wasserflasche mit 500ml.", // Clubwissen
+    "Ne mein Hübscher.", // Besuchsgrund
+    "Ich habe nicht nur Schmetterlinge im Bauch, sondern auch Feuerwerk, so süß wie du bist;).", // Gesundheit
+    "Negativ.", // wiederholter Besuch
+    "Suche nur Jemanden wie dich.", // Beruf
   ]},
-  // Business Woman
-  { src: './media/visitors/visitors_festival/05.png', patient: true, desired: true, answers: [
-    "Du weißt wohl nicht wer ich bin. Aber gut wenn's sein muss.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "42", // Alter
-    "Meine Geldbörse, mein Handy und eine Pistole... Nur ein Scherz, hahahaha.", // Habseligkeiten
-    "Wurde mir empfohlen.", // Clubwissen
-    "Ich treffe mich hier mit Kollegen.", // Besuchsgrund
-    "Mir gehts prima.", // Gesundheit
-    "Natürlich.", // wiederholter Besuch
-    "Ich leite erfolgreich ein mittelständiges Unternehmen.", // Beruf
+  // aufdringliches GÖÖRL
+  { src: './media/visitors/visitors_festival/05.png', patient: false, desired: false, answers: [
+    "Aber zacki.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "18, nächste Frage?", // Alter
+    "Ne, das hole ich mir jetzt.", // Habseligkeiten
+    "NIX, WAS DENN NOCH?", // Clubwissen
+    "Schweizer Taschenmesser.", // Besuchsgrund
+    "Nö.", // Gesundheit
+    "AUCH NICHT!", // wiederholter Besuch
+    "Mich abschießen.", // Beruf
   ]},
-    // Old Man
-    { src: './media/visitors/visitors_festival/06.png', patient: true, desired: true, answers: [
-      "Erzähl mal Jungchen.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "62 Jahre.", // Alter
-      "Mein Handy und mein Geld aber sonst nichts.", // Habseligkeiten
-      "Noch nicht viel... Deshalb bin ich hier.", // Clubwissen
-      "Mein Sohn geht hier oft hin und ich wollte mir das mal ansehen.", // Besuchsgrund
-      "Vor zwei Jahren habe ich mir den Fuß gebrochen und seit dem tut der weh.", // Gesundheit
-      "Ich war noch nie hier.", // wiederholter Besuch
-      "Ich bin Professor.", // Beruf
+    // Pookie Man WISCHHH
+    { src: './media/visitors/visitors_festival/06.png', patient: false, desired: true, answers: [
+      "Beeil dich, muss noch ne Story machen bevor die anderen da sind.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "23!!", // Alter
+      "Ja und jetzt mach hinne!", // Habseligkeiten
+      "Habe nichts dabei, du weißt schon... Kann mir mit meinem Vermögen eh alles kaufen.", // Clubwissen
+      "Meine Attraktivität.", // Besuchsgrund
+      "Ich selbst bin halt ne scharfe Bombe... ;)", // Gesundheit
+      "AUF KEINEN FALL! Was denkst du von mir?!", // wiederholter Besuch
+      "Story, Fotos und sowas. Meine ganzen Follower warten schon!", // Beruf
     ]},
-    // Cool guy
+    // Mitarbeiterin
     { src: './media/visitors/visitors_festival/07.png', patient: true, desired: true, answers: [
-      "Hau raus!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "32 Jahre.", // Alter
-      "Meinen Autoschlüssel und mein Geld.", // Habseligkeiten
-      "Entspannter Club zum Spaß haben.", // Clubwissen
-      "Ich brauche Ablenkung vom Alltag.", // Besuchsgrund
-      "Alles super.", // Gesundheit
-      "Das siebte mal mitlerweile. Also jap.", // wiederholter Besuch
-      "Ich bin Autoverkäufer.", // Beruf
+      "Na dann mal los.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "31 Jahre.", // Alter
+      "Nein, aber habe meinen Mitarbeiter-Ausweis dabei.", // Habseligkeiten
+      "Ich habe nichts dabei.", // Clubwissen
+      "So etwas besitze ich nicht.", // Besuchsgrund
+      "Dafür bin ich nicht zuständig.", // Gesundheit
+      "Nein, ich arbeite hier. Sonst würde man mich feuern.", // wiederholter Besuch
+      "Ich bin Background-Singer.", // Beruf
     ]},
-      // Cowgirl
-    { src: './media/visitors/visitors_festival/08.png', patient: false, desired: false, answers: [
-      "Junge... Los, beeile dich!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "22", // Alter
-      "Nichts besonderes.", // Habseligkeiten
-      "Halt Club.", // Clubwissen
-      "Ein bissl was kaufen, wenn du verstehst.", // Besuchsgrund
-      "Ich bin auf Entzug.", // Gesundheit
+      // Tänzerin
+    { src: './media/visitors/visitors_festival/08.png', patient: false, desired: true, answers: [
+      "Ja schieß los.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "28", // Alter
+      "Na sicher.", // Habseligkeiten
+      "Gar nichts.", // Clubwissen
+      "Nein.", // Besuchsgrund
+      "Nein.", // Gesundheit
       "Nö.", // wiederholter Besuch
-      "Ich verkaufe hin und wieder so Zeug.", // Beruf
-    ]},
-      // Cowboy
-    { src: './media/visitors/09.png', patient: false, desired: false, answers: [
-      "Nagut, aber mach schnell!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "42 Jahre alt und mitten im Leben.", // Alter
-      "Nen Revolver.", // Habseligkeiten
-      "Kein Plan.", // Clubwissen
-      "Ja Feiern halt.", // Besuchsgrund
-      "Ganz gut.", // Gesundheit
-      "Ja war schonmal hier gewesen.", // wiederholter Besuch
-      "Scharfschütze.", // Beruf
-    ]},
-      // Vorlage
-    { src: './media/visitors/10.png', patient: false, desired: true, answers: [
-      "Mein Gott, dann los.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Ich bin vor 2 Wochen 22 Geworden.", // Alter
-      "Nix.", // Habseligkeiten
-      "Joa soll ganz cool sein.", // Clubwissen
-      "Ich will mich entspannen.", // Besuchsgrund
-      "Alles gut.", // Gesundheit
-      "Jap.", // wiederholter Besuch
-      "Ich bin aktuell arbeitslos.", // Beruf
-    ]},
-        // Vorlage
-    { src: './media/visitors/11.png', patient: true, desired: true, answers: [
-      "Aber schnell bitte.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "33 Jahre jung und immer noch neugierig auf das Leben.", // Alter
-      "Meinen Anzug.", // Habseligkeiten
-      "Nicht viel.", // Clubwissen
-      "Ich will feiern.", // Besuchsgrund
-      "Mir geht's gut.", // Gesundheit
-      "Nope.", // wiederholter Besuch
-      "Nach was sieht's wohl aus.", // Beruf
-    ]},
-        // Vorlage
-    { src: './media/visitors/12.png', patient: false, desired: true, answers: [
-      "Na dann hop.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Ich bin 29 Jahre alt und genieße meine letzten Zwanziger.", // Alter
-      "Schlüssel und Handy.", // Habseligkeiten
-      "Angeblich soll er sehr gut sein.", // Clubwissen
-      "Feiern...", // Besuchsgrund
-      "Bin gesund.", // Gesundheit
-      "Ja.", // wiederholter Besuch
-      "Business Manager.", // Beruf
-    ]},
-        // Vorlage
-    { src: './media/visitors/13.png', patient: true, desired: false, answers: [
-      "Hmm...", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Google doch.", // Alter
-      "...", // Habseligkeiten
-      "...", // Clubwissen
-      "Geht dich nichts an.", // Besuchsgrund
-      "Hat dich nicht zu interessieren.", // Gesundheit
-      "...", // wiederholter Besuch
-      "...", // Beruf
-    ]},
-        // Vorlage
-    { src: './media/visitors/14.png', patient: true, desired: false, answers: [
-      "Jaa okee.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Heehehe 18...?", // Alter
-      "Äh nix.", // Habseligkeiten
-      "Is toll.", // Clubwissen
-      "Ich will Spaß haben.", // Besuchsgrund
-      "Mir gehts gut.", // Gesundheit
-      "Neee ist mein erstes Mal.", // wiederholter Besuch
-      "Gerade bin ich arbeitslos.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/15.png', patient: true, desired: false, answers: [
-      "Muss das sein?", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Ich bin stolze 23! ", // Alter
-      "Nur mein Telefon und Portemonnaie.", // Habseligkeiten
-      "Nichts hab aber ein Werbe Poster gesehen.", // Clubwissen
-      "Na ich will Party machen!", // Besuchsgrund
-      "Bin etwas krank aber is mir egal.", // Gesundheit
-      "Ne das erste Mal.", // wiederholter Besuch
-      "Ich bin natürlich Anwalt.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/16.png', patient: false, desired: true, answers: [
-      "Kein Problem.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Ich werde bald 50.", // Alter
-      "Nur persönliche Sachen, Portemonnaie usw.", // Habseligkeiten
-      "Durch eine gute Freundin.", // Clubwissen
-      "Eine Freundin feiert hier Geburtstag.", // Besuchsgrund
-      "Mir geht's blendent.", // Gesundheit
-      "Ja, schon mehrmals.", // wiederholter Besuch
-      "Schauspieler.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/17.png', patient: false, desired: false, answers: [
-      "Man ich muss schnell rein!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "38", // Alter
-      "K.O.-Tropfen.", // Habseligkeiten
-      "Durch einen Kunden.", // Clubwissen
-      "Geschäftlich.", // Besuchsgrund
-      "Mir geht's gut.", // Gesundheit
-      "Das erste Mal.", // wiederholter Besuch
-      "Ich bin Kopfgeldjäger.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/18.png', patient: false, desired: true, answers: [
-      "Okay.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "83", // Alter
-      "Geld.", // Habseligkeiten
-      "Von damals.", // Clubwissen
-      "Wegen der alten Erinnerungen.", // Besuchsgrund
-      "Mir geht's gut.", // Gesundheit
-      "Ja schon damals in den guten alten Zeiten war ich hier.", // wiederholter Besuch
-      "Ich bin in Rente.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/19.png', patient: false, desired: false, answers: [
-      "MAN ICH BIN PRÄSIDENT!!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "77", // Alter
-      "Nur meinen Aktenkoffer mit rotem Knopf.", // Habseligkeiten
-      "Durch einen Angestellten.", // Clubwissen
-      "Ich besauf mich gerne.", // Besuchsgrund
-      "Soweit gut.", // Gesundheit
-      "Bin das erste Mal hier.", // wiederholter Besuch
-      "Politiker.", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/20.png', patient: false, desired: true, answers: [
-      "Unnötig aber sag!", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "24...das fragt man eine Frau nicht!", // Alter
-      "Hab nichts dabei außer Geld.", // Habseligkeiten      "Ich weiß noch nichts. Ich lasse mich überraschen.", // Clubwissen
-      "Ich will feiern hä.", // Besuchsgrund
-      "Ja.", // Gesundheit
-      "Nein noch nicht", // wiederholter Besuch      "Ich bin Barkeeperin", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/21.png', patient: true, desired: false, answers: [
-      "Ich höre.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "Genau will ich das nicht sagen aber auf jeden fall deutlich über", // Alter
-      "Ein paar Bier.", // Habseligkeiten
-      "Na Club halt.", // Clubwissen
-      "Spaß was den sonst.", // Besuchsgrund
-      "Ich habe ein bisschen schnupfen.", // Gesundheit
-      "Ja", // wiederholter Besuch
-      "Ich bin Bäckerin", // Beruf
-    ]},
-    // Vorlage
-    { src: './media/visitors/22.png', patient: false, desired: true, answers: [
-      "Ok", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "20", // Alter
-      "Ich hab Geld dabei.", // Habseligkeiten
-      "Is nen berühmter Club in Berlin.", // Clubwissen
-      "Ich will mir den Club mal ansehen.", // Besuchsgrund
-      "Jo", // Gesundheit
-      "Schon zwei mal.", // wiederholter Besuch
-      "Ich Studiere noch.", // Beruf
+      "Feier ein bisschen mit Freunden.", // Beruf
     ]},
 ]
 
