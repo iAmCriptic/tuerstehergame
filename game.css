@@ -1,9 +1,3 @@
-body {
-  background-image: url("./media/Backgrounds/bg_club.jpg");
-  background-position-y: bottom;
-  font-size: 20px;
-}
-
 #visitors {
   width: 100vw;
   height: 100vh;

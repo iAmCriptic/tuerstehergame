@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <title>Der Türsther - Club</title>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="festival.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="./media/Icons/website.ico">
+</head>
+
+<body>
+  <header>
+    <div id="score">0</div>
+    <a href="festival.html#pause" id="logoLink">
+      <img src="./media/Icons/pause_icon.png" class="logo" >
+    </a>
+    <div id="health">❤️❤️❤️</div>
+  </header>
+  
+  <div id="visitors">
+    <img id="visitor" src="./media/visitors/01.png" alt="The Visitor" />
+  </div>
+  <ol id="chat">
+  </ol>
+
+  <div id="questions">
+  </div>
+
+  <button class="action" id="accept">Person Reinlassen</button>
+  <button class="action" id="decline">Person Wegschicken</button>
+
+  <div class="modal" id="game-over"> <!--Loosescreen-->
+    <div class="content">
+      Du hast deinen Chef enttäuscht.
+      <br />
+      GAME OVER
+      <br><br><br>
+      
+      <a href="festival.html">
+        <img src="./media/Icons/retry_logo.png" id="logo">
+      </a>
+         
+      <a href="index.html">
+        <img src="./media/Icons/home_logo.png" id="logo">
+      </a>
+    </div>
+  </div>
+
+  <div class="modal" id="pause"> <!-- Pause Menü, Aktuell nur über url Ergänzung aufrufbar -->
+    <div class="content">
+      Dein Kollege hat gerade übernommen.
+      <br>
+      Pause
+      <br><br>
+
+      <label for="volumeSlider" id="volumeLabel"><img src="media/Icons/volume_logo.png" id="volumelogo"></label>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" oninput="adjustVolume(this.value)">
+      <br><br>
+
+      <a href="index.html">
+        <img src="./media/Icons/home_logo.png" id="logo">
+      </a>
+
+      <a onClick="javascript:history.back()">
+        <img src="./media/Icons/resume_logo.png" id="logo">
+      </a>
+    </div>
+  </div>
+
+  <div class="modal" id="endless-selection"> <!--Rundenende / Auswahl endless Mode Menü, Aktuell nur über url Ergänzung aufrufbar-->
+    <div class="content">
+      Du Hast das Level Abgeschlossen
+      <br />
+      <div id="stars"></div>
+      <br>
+      Möchtest du zum Hauptmenü oder Weiterspielen?
+      <br>
+      <a href="index.html">
+        <img src="./media/Icons/home_logo.png" id="logo">
+      </a>
+
+      <a onClick="javascript:history.back()">
+        <img src="./media/Icons/resume_logo.png" id="logo">
+      </a>
+    </div>
+  </div>
+
+
+  <audio id="backgroundMusic" autoplay> <!--Musik im Spiel-->
+    <source src="" type="audio/mp3" volume="0.5">
+    In einem modernen Browser gäbe es sogar Musik!
+  </audio>
+
+  <script defer src="festival.js"></script>
+</body>
+
+</html>
