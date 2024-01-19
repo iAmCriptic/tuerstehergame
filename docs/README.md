@@ -31,7 +31,8 @@ Bilder Wurden mit der KI https://perchance.org/ai-pixel-art-generator  Erstellt 
 Icons stammen von https://www.flaticon.com/
 
 ## Musik
-Music provided by NoCopyrightSounds
+Music provided by NoCopyrightSounds <br>
+Music provided by Pixabay<br><br>
 
 Artists:
   - Club:
@@ -48,4 +49,6 @@ Artists:
     - Diamond Eyes
   - Festival:
     - Enter Artist Here
+  - Prison:
+    - Jerome F.
       
