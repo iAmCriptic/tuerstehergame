@@ -17,14 +17,14 @@ let stars = 0
 let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
-let endlessCount = 0
+let endlessCount = -1
 let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
   // Blumenmädchen
   { src: './media/visitors/visitors_festival/01.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
-    "Selbstverständlich.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "Selbstverständlich.",
     "26", 
     "Ja, klar.", 
     "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", 
@@ -99,7 +99,7 @@ const visitors = [
       "Nein, ich arbeite hier. Sonst würde man mich feuern.", // wiederholter Besuch
       "Ich bin Background-Singer.", // Beruf
     ]},
-      // Tänzerin
+    // Tänzerin
     { src: './media/visitors/visitors_festival/08.png', patient: false, desired: true, answers: [
       "Ja schieß los.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
       "28", // Alter
@@ -110,7 +110,191 @@ const visitors = [
       "Nö.", // wiederholter Besuch
       "Feier ein bisschen mit Freunden.", // Beruf
     ]},
+
+    // Bierfrau
+    { src: './media/visitors/visitors_festival/09.png', patient: true, desired: false, answers: [
+      "Hau raus.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "Icg bin 24 Jahre Alt", // Alter
+      "Na sicher.", // Habseligkeiten
+      "Gar nichts.", // Clubwissen
+      "Nein.", // Besuchsgrund
+      "Nein.", // Gesundheit
+      "Nö.", // wiederholter Besuch
+      "Feier ein bisschen mit Freunden.", // Beruf
+    ]},
+
+    // Bgtänzerin_Mitarbeiterin
+    { src: './media/visitors/visitors_festival/10.png', patient: true, desired: true, answers: [
+      "Ja klar aber du weißt schon das ich hier arbeite oder?", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "24", // Alter
+      "Jaa ich habe sogar eine Mitarbeiterticket.", // Habseligkeiten
+      "Gar nichts ich bin schließlich zum Arbeiten hier.", // Clubwissen
+      "Nein.", // Besuchsgrund
+      "Nein.", // Gesundheit
+      "Nein.", // wiederholter Besuch
+      "Arbeiten...?!.", // Beruf
+    ]},
+
+    // Freundesgruppe 1
+    { src: './media/visitors/visitors_festival/11.png', patient: true, desired: true, answers: [
+      "Nagut weil du es bist..", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "26, 28, 32 und Jahre alt.", // Alter
+      "Wir haben unsre Tickets natürlich alle dabei.", // Habseligkeiten
+      "Wir haben zwei 0,5L Wasserflaschen dabei.", // Clubwissen
+      "Bis auf unsere Gefährlich gute Stimmung nichts.", // Besuchsgrund
+      "Nope.", // Gesundheit
+      "Nein sowas verabscheuen wir.", // wiederholter Besuch
+      "Feeiiieeeerrrnnnnnn!!!!!!!!!!!!!!!!!!!!.", // Beruf
+    ]},
+
+    // Freundesgruppe 2
+    { src: './media/visitors/visitors_festival/12.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "Wir sind tatsächlich alle 24 Jahre Alt.", //Wie alt bist du?
+      "Ja, natürlich.", //Hast du dein Ticket bei dir?
+      "Wir haben nichts bei uns.", //Wie viel Essen und Trinken hast du bei dir?
+      "Nee.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Ne ich habe ein bissl angst vor Feuerwerk.", //Hast du Pyrotechnik bei dir?
+      "Hallo...nein sowas haber wir nicht.", //Bestitzt du Illegale Substanzen?
+      "Wir sind zum spaß haben hier.", //Was machst du hier?
+    ]},
+    
+    // Freundesgruppe_Frauen
+    { src: './media/visitors/visitors_festival/13.png', patient: false, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Ja aber beeile dich bitte unsere Freunde warten schon auf uns.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "Wir sind 34, 28, 28 und 36.", //Wie alt bist du?
+      "Ja haben wir.", //Hast du dein Ticket bei dir?
+      "Nein.", //Wie viel Essen und Trinken hast du bei dir?
+      "Nein, bitte beeilen sie dich unsere Freunde warten.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Nein haben wir nicht.", //Hast du Pyrotechnik bei dir?
+      "Nahein.", //Bestitzt du Illegale Substanzen?
+      "Wir treffen uns mit freunden.", //Was machst du hier?
+    ]},
+
+    // 
+    { src: './media/visitors/visitors_festival/14.png', patient: false, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Ok.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "30", //Wie alt bist du?
+      "Ja.", //Hast du dein Ticket bei dir?
+      "Garnichts.", //Wie viel Essen und Trinken hast du bei dir?
+      "Nöö.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Nein digga.", //Hast du Pyrotechnik bei dir?
+      "Neiinnnn.", //Bestitzt du Illegale Substanzen?
+      "Feiern was sonst.", //Was machst du hier?
+    ]},
+
+    // 
+    { src: './media/visitors/visitors_festival/15.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "26", //Wie alt bist du?
+      "Ja, klar.", //Hast du dein Ticket bei dir?
+      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
+      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
+      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
+      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/16.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "26", //Wie alt bist du?
+      "Ja, klar.", //Hast du dein Ticket bei dir?
+      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
+      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
+      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
+      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/17.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "26", //Wie alt bist du?
+      "Ja, klar.", //Hast du dein Ticket bei dir?
+      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
+      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
+      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
+      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/18.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "26", //Wie alt bist du?
+      "Ja, klar.", //Hast du dein Ticket bei dir?
+      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
+      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
+      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
+      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/19.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Na klar.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "31 und 32.", //Wie alt bist du?
+      "Ja, klar.", //Hast du dein Ticket bei dir?
+      "Nur ein bisschen Wasser für Notfälle.", //Wie viel Essen und Trinken hast du bei dir?
+      "Selbstverständlich nicht.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Nein, nachher ist ja die Show.", //Hast du Pyrotechnik bei dir?
+      "Nein, sowas haben wir nicht nötig!", //Bestitzt du Illegale Substanzen?
+      "Wir freuen uns auf die Musik und die Pyro-Show.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/20.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Leg los.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "22 und 25.", //Wie alt bist du?
+      "Na klar.", //Hast du dein Ticket bei dir?
+      "Wir haben nichts dabei.", //Wie viel Essen und Trinken hast du bei dir?
+      "Neeee!?", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Niemals.", //Hast du Pyrotechnik bei dir?
+      "Nee.", //Bestitzt du Illegale Substanzen?
+      "Sind gespannt wie es wird.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/21.png', patient: false, desired: false, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Na komm, alter...",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "20", //Wie alt bist du?
+      "Jo.", //Hast du dein Ticket bei dir?
+      "Nix.", //Wie viel Essen und Trinken hast du bei dir?
+      "Naja nur ne Handwaffe, falls wer frech wird.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Warum sollte ich.", //Hast du Pyrotechnik bei dir?
+      "Hab nichts genommen, sagen wir es so.", //Bestitzt du Illegale Substanzen?
+      "Bissl dealen.", //Was machst du hier?
+    ]},
+
+      // 
+    { src: './media/visitors/visitors_festival/22.png', patient: true, desired: false, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "FBAFKJLCNAhfb§$!!",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "LKOW§°?", //Wie alt bist du?
+      "GAD&%W$.", //Hast du dein Ticket bei dir?
+      "NäjabasfbhsjhJHSA.", //Wie viel Essen und Trinken hast du bei dir?
+      "aNHNFL§00LSF", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "DJAHBEW.", //Hast du Pyrotechnik bei dir?
+      "DCAKDnäöÄLDA!", //Bestitzt du Illegale Substanzen?
+      "KDABJBW§$JFDA%... HILF.... MIR!", //Was machst du hier?
+    ]},
+    
+      // 
+    { src: './media/visitors/visitors_festival/23_c.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Leg los DIGGA.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "24", //Wie alt bist du?
+      "KLARO!", //Hast du dein Ticket bei dir?
+      "Ne.", //Wie viel Essen und Trinken hast du bei dir?
+      "NEIN BRO!", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Naja nachher war doch ne Show, also ne diggi.", //Hast du Pyrotechnik bei dir?
+      "Nuh-UHHHH.", //Bestitzt du Illegale Substanzen?
+      "PARRTYYYYYY!!", //Was machst du hier?
+    ]},
+
+    
 ]
+
+
 
 const questions = [ //alle fragen, die zu verfügung stehen
   "Ich hab noch ein paar kurze Fragen dann können sie rein.",
@@ -205,7 +389,7 @@ function askQuestion(questionIndex) {
 
   const questionBtn = questionsEl.children[questionIndex]
   questionBtn.disabled = true //deaktiviert den Button (Nicht nochmal klickbar)
-
+  updateProgressBar(); 
   questionCount++ //erhöt den Question Count (Relevant wann die Person geht)
 
   createEl(chatEl, 'div', 'bubble out', question) //funktion zum Erstellen der Chat Bubbles?
@@ -312,6 +496,27 @@ function raiseEndless(){
 function openEndlessMenu(){
   if (endlessCount === 22){
     location.hash = 'endless-selection'
+  }
+}
+
+function updateProgressBar() {
+  const progressBar = $('progress-bar');
+  const progressArrow = $('progress-arrow');
+
+  // Anpassung der Fortschrittsleiste basierend auf dem Wert von `patient`
+  if (currentVisitor.patient) {
+    if (questionCount <= 6) {
+      // Berechne den Fortschritt in Prozent für den Patienten
+      const progressPercent = Math.max((5 - questionCount) / 5, 0) * 100; // Mindestwert von 0%
+      progressArrow.style.top = Math.max(progressPercent, 0) + '%';
+    }
+  } 
+  else {
+    if (questionCount <= 4) {
+      // Berechne den Fortschritt in Prozent für Nicht-Patienten
+      const progressPercent = Math.max((3 - questionCount) / 3, 0) * 100; // Mindestwert von 0%
+      progressArrow.style.top = Math.max(progressPercent, 0) + '%';
+    }
   }
 }
 

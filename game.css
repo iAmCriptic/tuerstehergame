@@ -47,6 +47,9 @@
 #decline {
   position: absolute;
   top: calc(75vh + 2em);
+  width: 10em;
+  height: 6em;
+  font-size: 1em;
 }
 
 #questions {
@@ -70,12 +73,16 @@ button.action {
   right: 1vw;
   margin-top: 2em;
   border-color: green;
+  border-width: 0.5em;
+  border-radius: 18px;
 }
 
 #decline {
   left: 1vw;
   margin-top: 2em;
   border-color: red;
+  border-width: 0.5em;
+  border-radius: 18px;
 }
 
 button:disabled {
@@ -218,4 +225,26 @@ input[type="range"]:focus::-moz-range-thumb {
  border: 1px solid #053a5f;
  outline: 3px solid #053a5f;
  outline-offset: 0.125rem; 
+}
+
+#progress-bar {
+  height: 70%; /* Anpassen der Höhe der Leiste */
+  width: 35px;
+  background: linear-gradient(to bottom, red, yellow, green); /* Farbverlauf von Rot nach Gelb nach Grün */
+  position: absolute;
+  left: 2%;
+  top: 10%;
+  border: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+#progress-arrow {
+  position: absolute;
+  left: 10%;
+  border: solid transparent;
+  top: 0;
+  border-left-color: rgb(0, 0, 0); /* Farbe des Pfeils */
+  border-width: 15px; /* Größe des Pfeils */
 }

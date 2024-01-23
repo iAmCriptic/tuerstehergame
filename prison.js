@@ -25,7 +25,7 @@ const visitors = [
   // Blumenmädchen
   { src: './media/visitors/visitors_prison/01.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
     "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
-    "", 
+    "", //
     "", 
     "", 
     "", 
@@ -133,6 +133,8 @@ function askQuestion(questionIndex) {
   const questionBtn = questionsEl.children[questionIndex]
   questionBtn.disabled = true //deaktiviert den Button (Nicht nochmal klickbar)
 
+  updateProgressBar(); 
+
   questionCount++ //erhöt den Question Count (Relevant wann die Person geht)
 
   createEl(chatEl, 'div', 'bubble out', question) //funktion zum Erstellen der Chat Bubbles?
@@ -239,6 +241,26 @@ function raiseEndless(){
 function openEndlessMenu(){
   if (endlessCount === 22){
     location.hash = 'endless-selection'
+  }
+}
+
+function updateProgressBar() {
+  const progressBar = $('progress-bar');
+  const progressArrow = $('progress-arrow');
+
+  // Anpassung der Fortschrittsleiste basierend auf dem Wert von `patient`
+  if (currentVisitor.patient) {
+    if (questionCount <= 6) {
+      // Berechne den Fortschritt in Prozent für den Patienten
+      const progressPercent = Math.max((5 - questionCount) / 5, 0) * 100; // Mindestwert von 0%
+      progressArrow.style.top = Math.max(progressPercent, 0) + '%';
+    }
+  } else {
+    if (questionCount <= 4) {
+      // Berechne den Fortschritt in Prozent für Nicht-Patienten
+      const progressPercent = Math.max((5 - questionCount) / 5, 0) * 100; // Mindestwert von 0%
+      progressArrow.style.top = Math.max(progressPercent, 0) + '%';
+    }
   }
 }
 

@@ -49,8 +49,8 @@ const visitors = [
     "Was willst'n wissen?", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "42 Jahre jung.", // Alter
     "Nichts besonderes, hier schau selbst...", // Habseligkeiten
-    "Wurde mir empfohlen.", // Clubwissen
-    "Party mit Freunden.", // Besuchsgrund
+    "Ihr seit abends relativ laut und sehr beliebt.", // Clubwissen
+    "Ich wollte mit meinem Hund mal woanders hin.", // Besuchsgrund
     "Mir geht's gut.", // Gesundheit
     "Nein noch nicht.", // wiederholter Besuch
     "Ich arbeite bei der Bank.", // Beruf
@@ -71,7 +71,7 @@ const visitors = [
     "Du weißt wohl nicht wer ich bin. Aber gut wenn's sein muss.", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "42", // Alter
     "Meine Geldbörse, mein Handy und eine Pistole... Nur ein Scherz, hahahaha.", // Habseligkeiten
-    "Wurde mir empfohlen.", // Clubwissen
+    "Gar nichts. hat unsere Freundin geplant.", // Clubwissen
     "Ich treffe mich hier mit Kollegen.", // Besuchsgrund
     "Mir gehts prima.", // Gesundheit
     "Natürlich.", // wiederholter Besuch

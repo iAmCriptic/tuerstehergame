@@ -158,7 +158,7 @@ header {
   padding: 1em;
   background: #000A;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 #changelog .close {
