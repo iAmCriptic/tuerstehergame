@@ -13,6 +13,6 @@ document.addEventListener("keydown", function(event) {
         location.hash = 'shortcuts'
     }
     if (event.keyCode === 27 ) {
-        history.back()
+        history.back();
     }
   });
