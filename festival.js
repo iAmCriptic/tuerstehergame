@@ -228,7 +228,7 @@ const visitors = [
       "Wenn du mich noch lange aufhälst deine Kündigung.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
       "Jungchien...nein habe ich nicht.", //Hast du Pyrotechnik bei dir?
       "Natürlich nicht.", //Bestitzt du Illegale Substanzen?
-      "IchMich darum kümmern, dass alles nach Plan verläuft.", //Was machst du hier?
+      "Mich darum kümmern, dass alles nach Plan verläuft.", //Was machst du hier?
     ]},
 
       // 
