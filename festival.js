@@ -171,7 +171,7 @@ const visitors = [
       "Wir treffen uns mit freunden.", //Was machst du hier?
     ]},
 
-    // 
+    //Motherfucker
     { src: './media/visitors/visitors_festival/14.png', patient: false, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
       "Ok.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
       "30", //Wie alt bist du?
@@ -183,60 +183,60 @@ const visitors = [
       "Feiern was sonst.", //Was machst du hier?
     ]},
 
-    // 
+    // Pyrotechniker
     { src: './media/visitors/visitors_festival/15.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
-      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "26", //Wie alt bist du?
-      "Ja, klar.", //Hast du dein Ticket bei dir?
-      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
-      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
-      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
-      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
-      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+      "Jagut ich Arbeite zwar hier aber erzähl.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "31", //Wie alt bist du?
+      "Ja natürlich ich arbete schließlich hier.", //Hast du dein Ticket bei dir?
+      "Garnichts.", //Wie viel Essen und Trinken hast du bei dir?
+      "Die Rakten für die Pyroshow heute abend.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Ja habe ich für die Pyroshow...", //Hast du Pyrotechnik bei dir?
+      "Nein ich bin zum Arbeiten hier.", //Bestitzt du Illegale Substanzen?
+      "Ich bin hauptverantwortlich für die Pyroshow.", //Was machst du hier?
     ]},
 
-      // 
-    { src: './media/visitors/visitors_festival/16.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
-      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "26", //Wie alt bist du?
-      "Ja, klar.", //Hast du dein Ticket bei dir?
-      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
-      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
-      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
-      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
-      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+      //Messermensch
+    { src: './media/visitors/visitors_festival/16.png', patient: false, desired: false, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Beeile dich aber.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "27", //Wie alt bist du?
+      "Ja habe ich.", //Hast du dein Ticket bei dir?
+      "1,5L Bier.", //Wie viel Essen und Trinken hast du bei dir?
+      "Nen Messer falls mir wer blöd kommt. Sicher ist sicher.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Nein heute nicht.", //Hast du Pyrotechnik bei dir?
+      "Hoff mal nicht ja. Du kannst bei mir nichts kaufen.", //Bestitzt du Illegale Substanzen?
+      "Na was denkst du den was ich hier machen will?", //Was machst du hier?
     ]},
 
-      // 
-    { src: './media/visitors/visitors_festival/17.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
-      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "26", //Wie alt bist du?
-      "Ja, klar.", //Hast du dein Ticket bei dir?
-      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
-      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
-      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
-      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
-      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+      // Motherfucker nummer 2
+    { src: './media/visitors/visitors_festival/17.png', patient: false, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
+      "Ja komm dann los.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "Alt genug Bro.", //Wie alt bist du?
+      "Ja natürlich.", //Hast du dein Ticket bei dir?
+      "Nein habe ich nicht.", //Wie viel Essen und Trinken hast du bei dir?
+      "Nein trage ich nicht...", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Wo sollte ich Pyrotechnik bei mir haben?", //Hast du Pyrotechnik bei dir?
+      "Ich sehe vielleicht so aus aber nein habe ich nicht.", //Bestitzt du Illegale Substanzen?
+      "Mal wieder feiern an meinem freien Tag.", //Was machst du hier?
     ]},
 
-      // 
+      // Inhaber
     { src: './media/visitors/visitors_festival/18.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
-      "Selbstverständlich.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
-      "26", //Wie alt bist du?
-      "Ja, klar.", //Hast du dein Ticket bei dir?
-      "Nur 0,5L Wasserflasche, so wie es erlaubt ist.", //Wie viel Essen und Trinken hast du bei dir?
-      "Wenn Blumen nicht als Waffen zählen, nein.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
-      "So etwas kommt mir nicht in die Hände.", //Hast du Pyrotechnik bei dir?
-      "BITTE?! Auf keinen Fall!", //Bestitzt du Illegale Substanzen?
-      "Ich freue mich auf die Musik und die Pyro-Show.", //Was machst du hier?
+      "Du weißt wohl nicht wer ich bin aber dan los.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
+      "Ich bin 34 Jahre alt.", //Wie alt bist du?
+      "Ja schließlich habe ich das Festival organisiert.", //Hast du dein Ticket bei dir?
+      "Nein habe ich nicht.", //Wie viel Essen und Trinken hast du bei dir?
+      "Wenn du mich noch lange aufhälst deine Kündigung.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
+      "Jungchien...nein habe ich nicht.", //Hast du Pyrotechnik bei dir?
+      "Natürlich nicht.", //Bestitzt du Illegale Substanzen?
+      "IchMich darum kümmern, dass alles nach Plan verläuft.", //Was machst du hier?
     ]},
 
       // 
     { src: './media/visitors/visitors_festival/19.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false wird Score tiefer gestellt, Patient Bestimmt die anzahl der Fragen false=4 true=6
       "Na klar.",// initiale Antwort, sollte auf (Un-)Geduld hinweisen
       "31 und 32.", //Wie alt bist du?
-      "Ja, klar.", //Hast du dein Ticket bei dir?
-      "Nur ein bisschen Wasser für Notfälle.", //Wie viel Essen und Trinken hast du bei dir?
+      "Ja, klar haben wir.", //Hast du dein Ticket bei dir?
+      "Nur ein bisschen Wasser für Notfälle aber weniger als 1L.", //Wie viel Essen und Trinken hast du bei dir?
       "Selbstverständlich nicht.", //Trägst du irgendwelche gefährlichen Gegenstände bei dir?
       "Nein, nachher ist ja die Show.", //Hast du Pyrotechnik bei dir?
       "Nein, sowas haben wir nicht nötig!", //Bestitzt du Illegale Substanzen?
