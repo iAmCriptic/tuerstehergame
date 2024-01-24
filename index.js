@@ -12,7 +12,7 @@ document.addEventListener("keydown", function(event) {
     if (event.keyCode === 84 ) {
         location.hash = 'shortcuts'
     }
-    if (event.keyCode === 27 ) {
+    if (event.key === "Escape" ) {
         history.back();
     }
   });
