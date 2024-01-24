@@ -13,6 +13,6 @@ document.addEventListener("keydown", function(event) {
         location.hash = 'shortcuts'
     }
     if (event.key === "Escape" ) {
-        history.back();
+        window.history.back();
     }
   });
