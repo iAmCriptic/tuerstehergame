@@ -22,8 +22,99 @@ let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
-  // Blumenmädchen
+  // Anwalt
   { src: './media/visitors/visitors_prison/01.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Anwalt
+  { src: './media/visitors/visitors_prison/02.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //FBI-Agents
+  { src: './media/visitors/visitors_prison/03.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Koch
+  { src: './media/visitors/visitors_prison/04.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Mafia Boss
+  { src: './media/visitors/visitors_prison/05.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Anwalt
+  { src: './media/visitors/visitors_prison/06.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Insasse 2
+  { src: './media/visitors/visitors_prison/07.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    "",
+  ]},
+  //Insasse 3
+  { src: './media/visitors/visitors_prison/08.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
     "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "", //
     "", 
