@@ -9,13 +9,13 @@ Das Türstehergame ist ein Schulprojekt von Schülern der Merian-Schule in Berli
 Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
 
 ## Updates
-###V1.0.2 - Stable 
+### V1.0.2 - Stable 
   - Anpassungen für Level 3
   - neue Bekannte bugs Notiert
   - Anpassungen am Startmenü
   - Ergänzung 404 Error Seite (https://imacriptic.github.io/tuerstehergame/404)
 
-###V1.0.1 - stable 
+### V1.0.1 - stable 
   - Ingame Changelog wurde hinzugefügt
   - Level ende mit Unendlichkeitsoption wurde hinzugefügt
   - Hintergrundmusik wurde hinzugefügt
