@@ -1,0 +1,230 @@
+body {
+  background-image: url("./media/Backgrounds/bg_menu.jpg");
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 1em;
+  text-shadow: 1px 1px 0 black;
+  font-size: 2em;
+}
+
+#welten > .content {
+  position: relative;
+  width: 1200px; /*960px*/
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#welten h1 {
+  margin: 0;
+}
+
+#welten .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#welten .difficultI,
+#welten .difficultII,
+#welten .difficultIII,
+#welten .difficultIV,
+#welten .difficultV {
+  margin-top: 10px; /* Füge nach Bedarf Abstand zwischen den Schwierigkeitsgraden hinzu */
+  flex: 0 0 33%;
+  text-align: center;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#welten .wolrds{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+#welten .difficultII a[disabled],
+#welten .difficultIII a[disabled],
+#welten .difficultIV a[disabled],
+#welten .difficultV a[disabled] {
+  opacity: .5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+#anleitung>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#anleitung h1 {
+  margin: 0;
+}
+
+#anleitung .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#clubregeln>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#clubregeln h1 {
+  margin: 0;
+}
+
+#clubregeln .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+#festivalregeln>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#festivalregeln h1 {
+  margin: 0;
+}
+
+#festivalregeln .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#changelog > .content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+#changelog .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+#changelog h1,
+#changelog h4 {
+  margin: 0;
+}
+
+#changelog ul{
+  margin: 0;
+}
+
+#shortcuts>.content {
+  position: relative;
+  width: 960px;
+  height: 640px;
+  padding: 1em;
+  background: #000A;
+}
+
+#shortcuts h1 {
+  margin: 0;
+}
+
+#shortcuts .close {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgba(0, 0, 0, 0.479);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  line-height: 1.45em;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.actions {
+  display: flex;
+  margin: 3em 0;
+}
+
+.score{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  color: black;
+}
+
+.action:disabled {
+  opacity: .5;
+  pointer-events: none;
+}

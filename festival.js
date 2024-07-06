@@ -1,4 +1,5 @@
 const $ = id => document.getElementById(id)
+backgroundMusic.src = getRandomMusic();
 
 const audio = $('backgroundMusic');
 const scoreEl = $('score')
@@ -308,10 +309,14 @@ const questions = [ //alle fragen, die zu verfügung stehen
 ]
 
 const musicFiles = [ //random auswahl von musik
-
+  './media/Musik/Festival_(1).mp3',
+  './media/Musik/Festival_(2).mp3',
+  './media/Musik/Festival_(3).mp3',
+  './media/Musik/Festival_(4).mp3',
+  './media/Musik/Festival_(5).mp3',
+  './media/Musik/Festival_(6).mp3',
+  './media/Musik/Festival_(7).mp3',
 ]
-
-backgroundMusic.src = getRandomMusic();
 
 function createEl(parent, elType, elClass, text) {
   const el = document.createElement(elType)
