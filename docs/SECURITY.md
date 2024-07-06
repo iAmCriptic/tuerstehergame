@@ -3,28 +3,43 @@
 ## Versionen
 | Version | Supported          | 
 | ------- | ------------------ |
-|   1.0.1 | Not Released Yet   |
-|   1.0.0 | :white_check_mark: | 
+|   1.0.3 | :white_check_mark: |
+|   1.0.2 | :x:                |
+|   1.0.1 | :x:                |
+|   1.0.0 | :x:                | 
 | < 1.0.0 | :x:                | 
-:white_check_mark:  :x:
-## Version changes 
-### 1.0.1 -- Planned for 22.01.2024
-  Thats Only the plans for the release. Patchnotes Will be Released on Release date
-  - Added Pause Button in Game :white_check_mark:
-  - Added New Levels 
-  - Added Volume adjustments  :white_check_mark:
-  - Added Info why you lost a Live
-  - Changes Point System  :white_check_mark:
-  - Added bar to see patience level
-  - Changes on how anwsers are Displayed in the game (Only Visual Changes)
-  - Bug Fixes
-  - Quality of life Changes
 
-### 1.0.0 -- Released 10.01.2024
+## Version changes 
+### V1.0.3 -- Stable
+  - Fehlerbehebungen
+      - Ein Fehler wurde behoben, das im Festival keine Musik abgespielt wird
+      - Neue fehler wurden gefunden und zur Bearbeitung notiert
+  - Sonstige Anpassungen und Veränderungen    
+### V1.0.2 -- Stable 
+  - Anpassungen für Level 3
+  - neue Bekannte bugs Notiert
+  - Anpassungen am Startmenü
+  - Ergänzung 404 Error Seite (https://imacriptic.github.io/tuerstehergame/404)
+
+### V1.0.1 -- stable 
+  - Ingame Changelog wurde hinzugefügt
+  - Level ende mit Unendlichkeitsoption wurde hinzugefügt
+  - Hintergrundmusik wurde hinzugefügt
+  - Hinfügen des Pausieren Buttons
+  - Fehlerbehebungen und leistungsverbesserungen
+  - Tastenkürzelmenü unter "T" Hinzugefügt
+  - Pausemenü hinzugefügt
+  - Neues Level Hinzugefügt: Festival
+  - Schwierigkeit von Club auf Stufe II Erhöt
+
+### v1.0.0 -- Beta
   - Improved Hud Layout
   - Added Clubrules
   - Improved GameOver-Screen
 
 ## Bugs
-Alles
+- Progressbar im Level "Club" Funktioniert nicht
+- Pause MEnü resettet Musik
+- Wer fehler findet arf gerne ein Issue Anlegen und Lösungsvorschläge kommentieren
 ## Sonstige
+:white_check_mark:  :x:
