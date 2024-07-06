@@ -65,7 +65,11 @@ Artists:
     - Alaina Cross
     - Diamond Eyes
   - Festival:
-    - Enter Artist Here
+    - Sam Day
+    -  Cafe Disko & Ella Rosa
+    -  Unlike Pluto
+    -  yanvince
+    -  NGO
   - Prison:
     - Jerome F.
     - u_mtwwpdxm9u
