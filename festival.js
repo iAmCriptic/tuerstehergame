@@ -306,13 +306,13 @@ const questions = [ //alle fragen, die zu verfügung stehen
 ]
 
 const musicFiles = [ //random auswahl von musik
-  './media/Musik/Festival_ 1.mp3',
-  './media/Musik/Festival_ 2.mp3',
-  './media/Musik/Festival_ 3.mp3',
-  './media/Musik/Festival_ 4.mp3',
-  './media/Musik/Festival_ 5.mp3',
-  './media/Musik/Festival_ 6.mp3',
-  './media/Musik/Festival_ 7.mp3',
+  './media/Musik/Festival_1.mp3',
+  './media/Musik/Festival_2.mp3',
+  './media/Musik/Festival_3.mp3',
+  './media/Musik/Festival_4.mp3',
+  './media/Musik/Festival_5.mp3',
+  './media/Musik/Festival_6.mp3',
+  './media/Musik/Festival_7.mp3',
 ]
 
 backgroundMusic.src = getRandomMusic();
