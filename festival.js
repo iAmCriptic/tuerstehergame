@@ -1,5 +1,4 @@
 const $ = id => document.getElementById(id)
-backgroundMusic.src = getRandomMusic();
 
 const audio = $('backgroundMusic');
 const scoreEl = $('score')
@@ -318,6 +317,8 @@ const musicFiles = [ //random auswahl von musik
   './media/Musik/Festival_(7).mp3',
 ]
 
+backgroundMusic.src = getRandomMusic();
+
 function createEl(parent, elType, elClass, text) {
   const el = document.createElement(elType)
   el.className = elClass
@@ -356,12 +357,13 @@ function lowerLife() { //verringert das leben oder zeigt den Endscreen an
     health--
     healthEl.innerText = '❤️'.repeat(health)
     saveGameState(); // Speichern nach jeder Änderung des Spielstands
+    console.log('Leben abgezogen')
     
   }
 }
 
 function lowerScore(){
-  if(score === 0){
+  if(score == 0){
     lowerLife();
   }
   else {
@@ -394,7 +396,7 @@ function askQuestion(questionIndex) {
 
   const questionBtn = questionsEl.children[questionIndex]
   questionBtn.disabled = true //deaktiviert den Button (Nicht nochmal klickbar)
-  updateProgressBar(); 
+  updateProgressBar();
   questionCount++ //erhöt den Question Count (Relevant wann die Person geht)
 
   createEl(chatEl, 'div', 'bubble out', question) //funktion zum Erstellen der Chat Bubbles?
