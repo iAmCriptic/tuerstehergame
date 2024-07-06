@@ -9,29 +9,10 @@ Das Türstehergame ist ein Schulprojekt von Schülern der Merian-Schule in Berli
 Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
 
 ## Updates
-### V1.0.2 - Stable 
-  - Anpassungen für Level 3
-  - neue Bekannte bugs Notiert
-  - Anpassungen am Startmenü
-  - Ergänzung 404 Error Seite (https://imacriptic.github.io/tuerstehergame/404)
-
-### V1.0.1 - stable 
-  - Ingame Changelog wurde hinzugefügt
-  - Level ende mit Unendlichkeitsoption wurde hinzugefügt
-  - Hintergrundmusik wurde hinzugefügt
-  - Hinfügen des Pausieren Buttons
-  - Fehlerbehebungen und leistungsverbesserungen
-  - Tastenkürzelmenü unter "T" Hinzugefügt
-  - Pausemenü hinzugefügt
-  - Neues Level Hinzugefügt: Festival
-  - Schwierigkeit von Club auf Stufe II Erhöt
-    
-### v1.0.0
-  - Improved Hud Layout
-  - Added Clubrules
-  - Improved GameOver-Screen
+--> Nach Security.md Verschoben
 
 ## Bilder
+Die Bilder Stammen aus V1.0.0. Das Tatsächliche aussehen kann sich mit der Zeit Verändern. Die Bilder werden zu gegebenem Zeitpunkt Aktualisiert.
 ### Startseite
 ![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/0e8245f3-7a01-4f38-8589-24d0de3bfe88)
 
@@ -49,7 +30,7 @@ Icons stammen von https://www.flaticon.com/
 
 ## Musik
 Music provided by NoCopyrightSounds <br>
-Music provided by Pixabay<br><br>
+Music provided by Pixabay<br>
 
 Artists:
   - Club:
