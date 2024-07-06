@@ -17,7 +17,7 @@ let stars = 0
 let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
-let endlessCount = -1
+let endlessCount = 0
 let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
@@ -289,9 +289,7 @@ const visitors = [
       "Naja nachher war doch ne Show, also ne diggi.", //Hast du Pyrotechnik bei dir?
       "Nuh-UHHHH.", //Bestitzt du Illegale Substanzen?
       "PARRTYYYYYY!!", //Was machst du hier?
-    ]},
-
-    
+    ]},  
 ]
 
 
@@ -308,13 +306,13 @@ const questions = [ //alle fragen, die zu verfügung stehen
 ]
 
 const musicFiles = [ //random auswahl von musik
-  './media/Musik/Festival_(1).mp3',
-  './media/Musik/Festival_(2).mp3',
-  './media/Musik/Festival_(3).mp3',
-  './media/Musik/Festival_(4).mp3',
-  './media/Musik/Festival_(5).mp3',
-  './media/Musik/Festival_(6).mp3',
-  './media/Musik/Festival_(7).mp3',
+  './media/Musik/Festival_1.mp3',
+  './media/Musik/Festival_2.mp3',
+  './media/Musik/Festival_3.mp3',
+  './media/Musik/Festival_4.mp3',
+  './media/Musik/Festival_5.mp3',
+  './media/Musik/Festival_6.mp3',
+  './media/Musik/Festival_7.mp3',
 ]
 
 backgroundMusic.src = getRandomMusic();
