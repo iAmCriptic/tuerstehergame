@@ -23,15 +23,14 @@ let starsEarned = [];
 /// Liste der Besucher mit Bild und infos über Geduld und Score
 const visitors = [
   // Anwalt
-  { src: './media/visitors/visitors_prison/01.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
-    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+  { src: './media/visitors/visitors_prison/01.png', patient: false, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "Ich hoffe es geht Schnell. Ich habe in 3 Minuten meinen Termin beim Insassen", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
     "", //
     "", 
     "", 
     "", 
     "", 
     "", 
-    "",
     "",
     "",
   ]},
@@ -46,7 +45,6 @@ const visitors = [
     "", 
     "",
     "",
-    "",
   ]},
   //FBI-Agents
   { src: './media/visitors/visitors_prison/03.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
@@ -57,7 +55,6 @@ const visitors = [
     "", 
     "", 
     "", 
-    "",
     "",
     "",
   ]},
@@ -72,7 +69,6 @@ const visitors = [
     "", 
     "",
     "",
-    "",
   ]},
   //Mafia Boss
   { src: './media/visitors/visitors_prison/05.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
@@ -83,7 +79,6 @@ const visitors = [
     "", 
     "", 
     "", 
-    "",
     "",
     "",
   ]},
@@ -98,7 +93,6 @@ const visitors = [
     "", 
     "",
     "",
-    "",
   ]},
   //Insasse 2
   { src: './media/visitors/visitors_prison/07.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
@@ -109,7 +103,6 @@ const visitors = [
     "", 
     "", 
     "", 
-    "",
     "",
     "",
   ]},
@@ -124,16 +117,146 @@ const visitors = [
     "", 
     "",
     "",
+  ]},
+  //Insasse 4
+  { src: './media/visitors/visitors_prison/09.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Reinigungskraft
+  { src: './media/visitors/visitors_prison/10.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 5
+  { src: './media/visitors/visitors_prison/11.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+    ]},
+  //Polizist mit Hund
+  { src: './media/visitors/visitors_prison/12.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 6
+  { src: './media/visitors/visitors_prison/13.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 7
+  { src: './media/visitors/visitors_prison/14.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 8 
+  { src: './media/visitors/visitors_prison/15.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Polizist
+  { src: './media/visitors/visitors_prison/16.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 9
+  { src: './media/visitors/visitors_prison/17.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Insasse 10
+  { src: './media/visitors/visitors_prison/18.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen
+    "", //
+    "", 
+    "", 
+    "", 
+    "", 
+    "", 
+    "",
+    "",
+  ]},
+  //Polizist
+  { src: './media/visitors/visitors_prison/19.png', patient: true, desired: true, answers: [ //Desired bestimmt ob die Person rein darf wenn false= nein, true= ja, Patient Bestimmt die anzahl der Fragen false=4 true=6
+    "", // initiale Antwort, sollte auf (Un-)Geduld hinweisen (Identifikation)
+    "", // Gegenstände
+    "", //Besuchsgrund
+    "",
+    "",
+    "",
+    "",
+    "",
     "",
   ]},
 ]
 
 const questions = [ //alle fragen, die zu verfügung stehen
-  "",
-  "",
-  "",
-  "",
-  "",
+  "Identifizieren sie sich!",
+  "Was für Gegenstände haben sie dabei?",
+  "Warum möchten sie in den Trakt?",
+  "Wer hat sie angefordert?",
   "",
   "",
   "",
@@ -142,7 +265,7 @@ const questions = [ //alle fragen, die zu verfügung stehen
 ]
 
 const musicFiles = [ //random auswahl von musik
-
+'./media/Musik/Club_1.mp3',
 ]
 
 backgroundMusic.src = getRandomMusic();
@@ -287,7 +410,9 @@ function loadGameState() { //lädt den stand des Games nach öffnen anderer Men�
 
 function saveGameState() { //speichert den Stand daes Games -- Wird durchgeführt nachdem eine Person reingelassen oder Weggeschickt wird
   const gameState = { score, health, visitorIndex, stars, endlessCount };
+  const highScore = { score};
   localStorage.setItem('gameState', JSON.stringify(gameState));
+  localStorage.setItem('highScore', JSON.stringify(highScore));
 }
 
 function resetGameState() { //Setzt den Speicher Zurück, beispielsweise nach dem Tod

@@ -302,7 +302,6 @@ const questions = [ //alle fragen, die zu verfügung stehen
   "Trägst du irgendwelche gefährlichen Gegenstände bei dir?",
   "Hast du Pyrotechnik bei dir?",
   "Bestitzt du Illegale Substanzen?",
-  "Was machst du hier?",
 ]
 
 const musicFiles = [ //random auswahl von musik
