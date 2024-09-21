@@ -1,3 +1,6 @@
+const $ = id => document.getElementById(id)
+const scoreEl = $('highscore')
+
 document.addEventListener("keydown", function(event) {
     // Überprüfen, ob die gedrückte Taste die "P"-Taste ist (keyCode 80)
     if (event.keyCode === 65) {
@@ -16,3 +19,13 @@ document.addEventListener("keydown", function(event) {
         window.history.back();
     }
   });
+
+  function loadGameState() { //lädt den stand des Games nach öffnen anderer Menüs
+    const savedState = localStorage.getItem('gameState');
+    if (savedState) {
+      const gameState = JSON.parse(savedState);
+      score = gameState.score;
+      scoreEl.innerText = `${score}`
+    }
+    return null;
+  }
