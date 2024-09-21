@@ -359,10 +359,11 @@ function acceptCurrentVisitor() {
   nextVisitor()
   raiseEndless()
   openEndlessMenu()
-  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  updateProgressBar()
+  Cooldown = 1500; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
   setTimeout(() => {
     Cooldown = 0; // Cooldown zurücksetzen
-  }, 2000);
+  }, 1500);
 }
 
 function declineCurrentVisitor(){
@@ -374,10 +375,11 @@ function declineCurrentVisitor(){
   nextVisitor()
   raiseEndless()
   openEndlessMenu()
-  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  updateProgressBar()
+  Cooldown = 1500; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
   setTimeout(() => {
     Cooldown = 0; // Cooldown zurücksetzen
-  }, 2000);
+  }, 1500);
 }
 
 function askQuestion(questionIndex) {
@@ -403,10 +405,10 @@ function askQuestion(questionIndex) {
       }
     }, 1000)
   }, 200)
-  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  Cooldown = 1500; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
   setTimeout(() => {
     Cooldown = 0; // Cooldown zurücksetzen
-  }, 2000);
+  }, 1500);
 }
 
 function resetQuestions() { //setzt den Questions Counter Zurück
