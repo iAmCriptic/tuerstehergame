@@ -18,6 +18,7 @@ let questionCount = 0
 let visitorIndex = 0
 let currentVisitor
 let endlessCount = 0
+let Cooldown = 0
 let starsEarned = [];
 
 /// Liste der Besucher mit Bild und infos über Geduld und Score
@@ -350,24 +351,37 @@ function lowerScore(){
 }
 
 function acceptCurrentVisitor() {
+  if (Cooldown > 0) return;
+
   if (currentVisitor.desired) raiseScore()  // Wenn der Aktuelle Besucher reindarf, Erhöhe den Score
   else lowerLife()
   raiseStars()
   nextVisitor()
   raiseEndless()
   openEndlessMenu()
+  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  setTimeout(() => {
+    Cooldown = 0; // Cooldown zurücksetzen
+  }, 2000);
 }
 
 function declineCurrentVisitor(){
+  if (Cooldown > 0) return;
+
   if(!currentVisitor.desired) raiseScore()
   else lowerScore()
   raiseStars()
   nextVisitor()
   raiseEndless()
   openEndlessMenu()
+  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  setTimeout(() => {
+    Cooldown = 0; // Cooldown zurücksetzen
+  }, 2000);
 }
 
 function askQuestion(questionIndex) {
+  if (Cooldown > 0) return;
   const question = questions[questionIndex]
   const answer = currentVisitor.answers[questionIndex]
 
@@ -389,6 +403,10 @@ function askQuestion(questionIndex) {
       }
     }, 1000)
   }, 200)
+  Cooldown = 2000; // Cooldown auf 1 Sekunde setzen (in Millisekunden)
+  setTimeout(() => {
+    Cooldown = 0; // Cooldown zurücksetzen
+  }, 2000);
 }
 
 function resetQuestions() { //setzt den Questions Counter Zurück
