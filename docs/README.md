@@ -2,35 +2,26 @@
 
 ## Über das Projekt
 
-Das Türstehergame ist ein Schulprojekt von Schülern der Merian-Schule in Berlin. Bei dem Spiel soll man ein Türsteher sein, welcher Leute überprüft, dies Kann er z.B. Durch fragen oder Aktionen wie Abtasten usw. Das Spiel Befindet sich zurzeit in Entwicklung, eine frühe version kann man über den Link unten Spielen
+Das Türstehergame war ein Schulprojekt von Schülern der Merian-Schule in Berlin. Bei dem Spiel soll man ein Türsteher sein, welcher Leute überprüft, dies Kann er z.B. Durch fragen oder Aktionen wie Abtasten usw. Das Spiel Befindet sich zurzeit in Entwicklung, eine frühe version kann man über den Link unten Spielen
 
-## Spielen
+Mittlerweile wird das Projket durch die beteiligten Schüler in der Freizeit weiterentwickelt. Dadurch das die Zeit fehlt intensiv dran zu Arbeiten wird die entwicklung langsamer.
 
-Zum Spielen https://iamcriptic.github.io/tuerstehergame/ öffnen
+## Bilder vom Spiel
 
-## Updates
---> Nach Security.md Verschoben
 
-## Bilder
-Die Bilder Stammen aus V1.0.0. Das Tatsächliche aussehen kann sich mit der Zeit Verändern. Die Bilder werden zu gegebenem Zeitpunkt Aktualisiert.
-### Startseite
-![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/0e8245f3-7a01-4f38-8589-24d0de3bfe88)
+## Bildgneratoren
+Das Spiel greift auf von KI generierte Bilder zurück. Dabei nutzten wir folgende Generatoren:
 
-### Startseite - Levelauswahl
-![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/51ef8a4e-fd8e-4719-9bf1-0825ce3b3c2f)
+Bilder und Hintergründe: https://perchance.org/ai-pixel-art-generator<br>
 
-### Startseite - Anleitung
-![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/c9de4f8d-6185-4aa7-a121-3ed441555cba)
-
-### Level I - Club
-![image](https://github.com/iAmCriptic/tuerstehergame/assets/87425235/421db482-047e-4509-94df-70d02c4aee6d)
-
-Bilder Wurden mit der KI https://perchance.org/ai-pixel-art-generator  Erstellt <br>
-Icons stammen von https://www.flaticon.com/
+Icons: https://www.flaticon.com/
 
 ## Musik
-Music provided by NoCopyrightSounds <br>
-Music provided by Pixabay<br>
+Für die Lieder im Hintergrund haben wir folgende Quellen und Artists verwendet:
+
+Quellen:
+- NoCopyrightSounds
+- Pixabay
 
 Artists:
   - Club:
@@ -56,3 +47,4 @@ Artists:
     - u_mtwwpdxm9u
     
       
+s

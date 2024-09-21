@@ -3,6 +3,7 @@
 ## Versionen
 | Version | Supported          | 
 | ------- | ------------------ |
+|     1.1 | :white_check_mark: |            
 |   1.0.3 | :white_check_mark: |
 |   1.0.2 | :x:                |
 |   1.0.1 | :x:                |
@@ -10,11 +11,30 @@
 | < 1.0.0 | :x:                | 
 
 ## Version changes 
+### V.1.1 -- Not Released yet
+  - Starseite
+    - Auf der Startseite wird nun der Letzte Score Angezeigt, dies Soll eine Vorrübergehende Lösung sein bis wir den Highscore richtig anzeigen können
+
+  - Level
+    - Release des Gefängnislevels 
+  
+  - Verbesserungen 
+    - Man kann nun nichtmehr alle Knöpfe durchspammen, sondern hat nun einen Kurzen cooldown bevor man den Nächsten knopf drücken kann.
+    - Die Progressbar wird nun in allen Leveln Korrekt Angezeigt
+    - Die Dokumentation auf der Github seite wurde AKtualisiert
+
+  - Fehlerbehebungen
+    - Der Highscore auf der Startseite wurde Entfernt
+    - Die Progressbar (Anzeige am rechten Bildschirmrand) wurde in allen Leveln Behoben
+    - Verschiedenes
+  - Sonstige Anpassungen und Veränderungen
+
 ### V1.0.3 -- Stable
   - Fehlerbehebungen
       - Ein Fehler wurde behoben, das im Festival keine Musik abgespielt wird
       - Neue fehler wurden gefunden und zur Bearbeitung notiert
-  - Sonstige Anpassungen und Veränderungen    
+  - Sonstige Anpassungen und Veränderungen 
+
 ### V1.0.2 -- Stable 
   - Anpassungen für Level 3
   - neue Bekannte bugs Notiert
@@ -38,8 +58,6 @@
   - Improved GameOver-Screen
 
 ## Bugs
-- Progressbar im Level "Club" Funktioniert nicht
-- Pause MEnü resettet Musik
-- Wer fehler findet arf gerne ein Issue Anlegen und Lösungsvorschläge kommentieren
+- Wer fehler findet darf gerne ein Issue Anlegen und Lösungsvorschläge kommentieren
 ## Sonstige
 :white_check_mark:  :x:
