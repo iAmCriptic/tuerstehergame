@@ -411,6 +411,21 @@ function askQuestion(questionIndex) {
   }, 1500);
 }
 
+function handleKeyPress(event) {
+  const key = event.key;
+  const questionIndex = parseInt(key);
+
+  if (!isNaN(questionIndex) && questionIndex >= 0 && questionIndex < questions.length) {
+    const questionBtn = questionsEl.children[questionIndex];
+
+    // Überprüfen, ob der Button noch nicht deaktiviert ist
+    if (!questionBtn.disabled) {
+      questionBtn.disabled = true;
+      askQuestion(questionIndex);
+    }
+  }
+}
+
 function resetQuestions() { //setzt den Questions Counter Zurück
   for (let button of questionsEl.children) {
     button.disabled = false
@@ -571,3 +586,5 @@ document.addEventListener("keydown", function(event) {
     location.hash = 'pause'
   }
 });
+
+document.addEventListener('keydown', handleKeyPress);
